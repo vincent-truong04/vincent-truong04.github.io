@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:lightblue;
+    border-bottom: 1px solid burlywood;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color:black;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color:brown;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color:black;
+}
+
+.logo {
+    display:flex;
+    align-items:center;
+    gap: 1rem;
+}
+
+.logo img{
+    height: 50px;
+    width: auto;
+}
