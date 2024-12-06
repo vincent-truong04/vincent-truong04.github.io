@@ -1,0 +1,22 @@
+.about-section {
+    background-color:rgb(14, 118, 209);
+}
+
+.about-section h2 {
+    margin-left:40px;
+}
+
+.aboutContent-container {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.paragraph {
+    font-size:1.5rem;
+    max-width:70%;
+}
+
+.img-container img {
+    border-radius:10px;
+}
