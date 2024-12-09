@@ -1,0 +1,21 @@
+.project-section {
+    width:100%;
+}
+
+nav2 {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    width:cover;
+}
+
+nav2 a{
+    display: inline-block; /* Make the link behave like a block-level element */
+    padding: 10px 20px; /* Add padding for button-like feel */
+     background-color: #007bff; /* Button background color */
+     color: white; /* Text color */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+     border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}

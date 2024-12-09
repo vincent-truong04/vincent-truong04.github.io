@@ -10,6 +10,7 @@ function Header(){
                 <h1>Vincent Truong</h1>
             </div>
             <nav>
+                <a href="#hero">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>

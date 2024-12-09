@@ -1,9 +1,10 @@
 header {
+    position:fixed;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:lightblue;
-    border-bottom: 1px solid burlywood;
+    background-color: rgba(116, 111, 111, 0.2);
     margin:0;
 }
 
