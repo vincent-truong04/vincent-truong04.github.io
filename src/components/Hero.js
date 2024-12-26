@@ -6,7 +6,6 @@ function Hero() {
     return(
         <section className="hero-section" id="hero">
             <Header />
-            <p>Welcome!</p>
         </section>
     )
 }

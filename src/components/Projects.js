@@ -1,15 +1,21 @@
 import React from 'react';
 import '../styling/Projects.css';
+import headshot from '../images/Headshot.png';
 
 function Projects(){
     return(
         <section classname="project-section" id="projects">
-            <nav2>
-                <a href="#project1">Project1</a>
-                <a href="#project2">Project2</a>
-                <a href="#project3">Project3</a>
-                <a href="#project4">Project4</a>
-            </nav2>
+            <div class="header">
+             <h3>Projects</h3>
+            </div>
+            <div class="project1">
+                <div class="project1-image">
+                    <img src= {headshot} alt="headshot" />
+                </div>
+                <h4>JoystickInsight</h4>
+
+  
+            </div>
         </section>
     );
 }
