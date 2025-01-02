@@ -10,7 +10,13 @@ body {
   background-attachment: fixed
 }
 
+
+
 .app-section {
   position: relative;
   z-index: 0; /* Ensure it's below other content */
+}
+
+html {
+  scroll-behavior: smooth;
 }

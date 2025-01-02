@@ -1,11 +1,12 @@
 import React from 'react'
 import '../styling/Hero.css';
-import Header from '../components/Header';
 
 function Hero() {
     return(
         <section className="hero-section" id="hero">
-            <Header />
+            <p>Welcome, my name is <span class="name">Vincent</span>.</p>
+            <p>I'm a Computer Engineering Student.</p>
+
         </section>
     )
 }
