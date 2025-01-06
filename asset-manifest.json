@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a8ade93.css",
-    "main.js": "/static/js/main.6845472b.js",
+    "main.css": "/static/css/main.907f0444.css",
+    "main.js": "/static/js/main.a2b230af.js",
     "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
     "static/media/Joystick_tester.jpeg": "/static/media/Joystick_tester.04af300bc36750db0162.jpeg",
     "static/media/stars.jpg": "/static/media/stars.50735324167c1aa6da0b.jpg",
     "static/media/Headshot.png": "/static/media/Headshot.d153af80d8051afcda71.png",
     "static/media/VT_logo.png": "/static/media/VT_logo.811782ac6fa286514d41.png",
     "index.html": "/index.html",
-    "main.5a8ade93.css.map": "/static/css/main.5a8ade93.css.map",
-    "main.6845472b.js.map": "/static/js/main.6845472b.js.map",
+    "main.907f0444.css.map": "/static/css/main.907f0444.css.map",
+    "main.a2b230af.js.map": "/static/js/main.a2b230af.js.map",
     "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a8ade93.css",
-    "static/js/main.6845472b.js"
+    "static/css/main.907f0444.css",
+    "static/js/main.a2b230af.js"
   ]
 }
