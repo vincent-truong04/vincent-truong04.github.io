@@ -1,19 +1,15 @@
 header {
-    position:fixed;
+    position: sticky;
+    top:0;
     width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(59, 69, 97);
     margin:0;
-    z-index: 1;
+    z-index: 10;
 }
 
-h1 {
-    font-size: 1.8rem;
-    color:beige;
-    margin: 0;
-}
 
 nav {
     display: flex;
@@ -22,7 +18,7 @@ nav {
 }
 
 nav a {
-    color: beige;
+    color: white;
     text-decoration: none;
     font-size: 25px;
     border: none;

@@ -6,7 +6,7 @@
 
 .about-section h2 {
     display:inline-block;
-    color:beige;
+    color:white;
     border-bottom: 3px solid lightblue;
     font-size: 35px;
     
@@ -21,7 +21,7 @@
 .paragraph {
     font-size:1.5rem;
     max-width:70%;
-    color:beige;
+    color:white;
 }
 
 .img-container img {

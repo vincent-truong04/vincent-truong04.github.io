@@ -8,8 +8,8 @@ import './styling/App.css';
 function App() {
   return (
     <div className="app-section">
-      <Header />
       <Hero />
+      <Header />
       <About />
       <Projects />
     </div>
