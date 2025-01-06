@@ -7,9 +7,9 @@
 .about-section h2 {
     display:inline-block;
     color:white;
-    border-bottom: 3px solid lightblue;
+    border-bottom: 3px solid rgb(173, 216, 230);
     font-size: 35px;
-    
+    margin-top: 100px;
 }
 
 .aboutContent-container {

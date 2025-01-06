@@ -6,7 +6,7 @@
     height: 100vh;
     color: whitesmoke;
     text-align: center;
-    font: Andale Mono;
+    font-family: 'Courier New', monospace;
     font-size: 50px;
     background-color: #000000;
     background-color: #000000;
@@ -16,8 +16,6 @@
 .name , .major {
     color:lightseagreen;
 }
-
-
 
 p1 {
     margin-bottom: 10px;
@@ -40,7 +38,7 @@ a{
     border-radius: 100px;
     font-weight: 600;
     color: lightseagreen;
-    box-shadow: 0 0 0 2px lightseagreen;
+    box-shadow: 0 0 0 2px rgb(32, 178, 170);
     cursor: pointer;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);

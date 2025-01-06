@@ -7,12 +7,66 @@ import './styling/App.css';
 
 function App() {
   return (
+    
     <div className="app-section">
+      <div class="background">
+          <span></span>
+        <span></span>
+        <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+       <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
       <Hero />
       <Header />
       <About />
       <Projects />
     </div>
+    
   );
 }
 

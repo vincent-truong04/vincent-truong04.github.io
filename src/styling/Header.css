@@ -5,7 +5,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(59, 69, 97);
+    background-color: rgb(54, 121, 117);
     margin:0;
     z-index: 10;
 }
@@ -18,31 +18,44 @@ nav {
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border: none;
-    background: none;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  nav a::before {
-    margin-left: auto;
-  }
-  
-  nav a::after, button::before {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: lightskyblue;
-    display: block;
-    transition: 0.5s;
-  }
-  
-  nav a:hover::after, nav a:hover::before {
-    width: 100%;
-  }
+  font-size: 18px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+nav a:focus,
+nav a:hover {
+  color: #535353;
+}
+
+nav a:focus:after,
+nav a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+nav a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: lightskyblue;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 
 .logo {
     display:flex;
@@ -50,6 +63,8 @@ nav a {
 }
 
 .logo img{
-    height: 30px;
+    height: 40px;
     width: auto;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
