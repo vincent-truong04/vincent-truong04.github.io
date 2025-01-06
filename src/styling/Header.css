@@ -20,7 +20,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     border: none;
     background: none;
     font-weight: 600;
@@ -47,10 +47,9 @@ nav a {
 .logo {
     display:flex;
     align-items:center;
-    gap: 1rem;
 }
 
 .logo img{
-    height: 50px;
+    height: 30px;
     width: auto;
 }
