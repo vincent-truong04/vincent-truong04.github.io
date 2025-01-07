@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.about-section h2 {
+.about-header h{
     display:inline-block;
     color:white;
     border-bottom: 3px solid rgb(173, 216, 230);
@@ -18,7 +18,7 @@
     align-items: center;
 }
 
-.paragraph {
+.aboutContent-container p{
     font-size:1.5rem;
     max-width:70%;
     color:white;

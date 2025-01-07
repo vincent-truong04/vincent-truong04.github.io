@@ -1,16 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-image: url('../images/stars.jpg'); /* Replace with your background image path */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  background-attachment: fixed
-}
-
-
 
 .app-section {
   position: relative;

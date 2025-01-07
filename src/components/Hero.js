@@ -13,7 +13,7 @@ function Hero() {
                 I'm a <span class="major">Computer Engineering</span> Student.
             </motion.p2>
 
-            <motion.a initial={{ y: "200%", opacity: 0 }}  animate={{ y: [0, -8 , 0], opacity: 1 }} transition={{ y:{ duration: 1, repeat: Infinity, repeatType: "loop", ease: "easeInOut"}, opacity: {duration: 0.5, ease: "easeOut"},}} href="#about" class="animated-button">
+            <motion.a initial={{ y: "500%", opacity: 0 }}  animate={{ y: [0, -8 , 0], opacity: 1 }} transition={{ y:{ duration: 1, repeat: Infinity, repeatType: "loop", ease: "easeInOut"}, opacity: {duration: 3, ease: "easeOut"},}} href="#about" class="animated-button">
                 <span>Learn More ⬇</span>
                 <span></span>
             </motion.a>

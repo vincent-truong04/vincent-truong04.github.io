@@ -17,12 +17,11 @@
     color:lightseagreen;
 }
 
-p1 {
+.hero-section p1 {
     margin-bottom: 10px;
-    
 }
 
-p2 {
+.hero-section p2{
     margin-bottom: 50px;
 }
 
@@ -73,7 +72,7 @@ a{
   }
   
   .animated-button:hover span:last-child {
-    width: 150px;
-    height: 150px;
+    width: 165px;
+    height: 165px;
     opacity: 1;
   }

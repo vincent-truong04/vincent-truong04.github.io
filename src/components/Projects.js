@@ -1,23 +1,35 @@
 import React from 'react';
 import '../styling/Projects.css';
-import JoystickInsight from '../images/Joystick_tester.jpeg';
+import JoystickIcon from '../images/Joystick_Icon.png';
+import PorfolioPic from '../images/Portfolio.png';
 
 function Projects(){
     return(
         <section classname="project-section" id="projects">
-            <div class="header">
-             <h3>Projects</h3>
+            <div class="project-header">
+                <h>Projects</h>
             </div>
-            <div class="project1">
-                <div class="description1">
-                    <h4>JoystickInsight</h4>
-                    <p>
-                        A full-stack program used to quickly test joystick hardware functionality and assess usability of newly created configuration files. 
-                        Coded in Java, alongside JavaFX and the JInput library.
-                    </p>
+            <div className="allProjects">
+                <div class="project1">
+                    <h1>JoystickInsight</h1>
+                    <div class="information1">
+                        <img src= {JoystickIcon} alt="JoystickIcon" />  
+                        <p>
+                            A full-stack program used to quickly test joystick hardware functionality and assess usability of newly created configuration files. 
+                            Coded in Java, alongside JavaFX and the JInput library.
+                        </p>
+                    </div>
                 </div>
 
-  
+                <div class="project2">
+                    <h1>Portfolio Website</h1>
+                    <div class="information2">
+                        <img src= {PorfolioPic} alt="PorfolioPic" />  
+                        <p>
+                            Created personal portfolio website deployed on GitHub Pages. Written in HTML and CSS, using React framework with Framer Motion for animations.
+                        </p>
+                 </div>
+                </div>
             </div>
         </section>
     );

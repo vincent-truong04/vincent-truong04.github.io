@@ -5,9 +5,11 @@ import headshot from '../images/Headshot.png';
 function About(){
     return(
         <section id="about" class="about-section">
-            <h2>About Me</h2>
+            <div class="about-header">
+                <h>About Me</h>
+            </div>
             <div class="aboutContent-container">
-                <p class="paragraph">
+                <p>
                   Hello! My name is Vincent Truong, and I am a junior at Christopher Newport University pursuing a degree in Computer Engineering with a minor in Leadership. 
                   My academic journey combines technical expertise with strong leadership skills, preparing me to tackle complex challenges in engineering and technology. 
                   Outside of the classroom, I am an active member of Pi Kappa Alpha and a captain of men's varsity tennis, both of which have honed my teamwork, 
