@@ -11,10 +11,19 @@ header {
     box-shadow: 0 5px 5px rgb(49, 97, 91);
 }
 
+.logo h {
+  font-size: 18px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 800;
+  margin: 10px;
+}
+
 nav {
     display: flex;
     gap: 1.5rem;
     margin-right: 1.5rem;
+    margin:10px;
 }
 
 nav a {

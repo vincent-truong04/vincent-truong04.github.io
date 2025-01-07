@@ -3,6 +3,7 @@ import About from './components/About';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 import './styling/App.css';
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
       <Header />
       <About />
       <Projects />
+      <Footer />
     </div>
     
   );

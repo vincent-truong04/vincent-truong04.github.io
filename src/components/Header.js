@@ -1,12 +1,11 @@
 import React from 'react';
 import '../styling/Header.css';
-import logo from '../images/VT_logo.png';
 
 function Header(){
     return(
         <header>
             <div className="logo">
-                <img src= {logo} alt="Logo" />
+                <h>V.T.</h>
             </div>
             <nav>
                 <a href="#hero">Home</a>

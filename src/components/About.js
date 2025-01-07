@@ -12,8 +12,7 @@ function About(){
                 <p>
                   Hello! My name is Vincent Truong, and I am a junior at Christopher Newport University pursuing a degree in Computer Engineering with a minor in Leadership. 
                   My academic journey combines technical expertise with strong leadership skills, preparing me to tackle complex challenges in engineering and technology. 
-                  Outside of the classroom, I am an active member of Pi Kappa Alpha and a captain of men's varsity tennis, both of which have honed my teamwork, 
-                  discipline, and perseverance. I am passionate about leveraging my skills to contribute to innovative projects and am eager to make an impact in the field of 
+                  Outside of the classroom, I am an active member of Pi Kappa Alpha and a captain of men's varsity tennis. I am passionate about leveraging my skills to contribute to innovative projects and am eager to make an impact in the field of 
                   computer engineering, especially in the area of embedded systems.
                 </p>
                 <div class="img-container">

@@ -26,7 +26,16 @@ function Projects(){
                     <div class="information2">
                         <img src= {PorfolioPic} alt="PorfolioPic" />  
                         <p>
-                            Created personal portfolio website deployed on GitHub Pages. Written in HTML and CSS, using React framework with Framer Motion for animations.
+                            Created personal portfolio website deployed on GitHub Pages. Written in HTML and CSS, using React as well as Framer Motion for animations.
+                        </p>
+                 </div>
+                </div>
+
+                <div class="project3">
+                    <h1>More in Progress!</h1>
+                    <div class="information3">
+                        <p>
+                            More projects on the way!
                         </p>
                  </div>
                 </div>
