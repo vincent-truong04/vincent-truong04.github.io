@@ -8,8 +8,8 @@ header {
     background-color: rgb(54, 121, 117);
     margin:0;
     z-index: 10;
+    box-shadow: 0 5px 5px rgb(49, 97, 91);
 }
-
 
 nav {
     display: flex;

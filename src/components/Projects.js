@@ -9,7 +9,6 @@ function Projects(){
              <h3>Projects</h3>
             </div>
             <div class="project1">
-                <img src= {JoystickInsight} alt="project1" />
                 <div class="description1">
                     <h4>JoystickInsight</h4>
                     <p>
