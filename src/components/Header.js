@@ -7,7 +7,7 @@ function Header(){
             <div className="logo">
                 <h>V.T.</h>
             </div>
-            <nav>
+            <nav classname="header-nav">
                 <a href="#hero">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>

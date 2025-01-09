@@ -1,16 +1,46 @@
 footer {
     width:100%;
+    position: absolute;
     background-color: rgb(54, 121, 117);
     text-align: center;
     box-shadow: 0 5px 5px rgb(49, 97, 91);
     z-index:10;
-    height: 50px;
+    height: auto;
+    padding:20px;
 }
 
 .footer {
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 12px;
+    color: #afafaf;
     font-family: inherit;
     font-weight: 800;
     margin: 10px;
+}
+.footer-header{
+    margin-bottom: 50px;
+}
+.footer-header h{
+    color:rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(173, 216, 230);
+    font-size: 35px;
+    margin-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+nav1 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+nav1 a {
+    font-size: 50px;
+    color: #353535;
+    font-family: inherit;
+    font-weight: 800;
+}
+
+nav1 a:hover {
+    color: white;
 }
