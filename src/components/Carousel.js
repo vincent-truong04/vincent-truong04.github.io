@@ -1,38 +1,60 @@
 import '../styling/Carousel.css';
 import JoystickIcon from '../images/Joystick_Icon.png';
 import PortfolioPic from '../images/Portfolio.png';
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
 function Carousel() {
     const carouselListRef = useRef(null);
+    const [debounceTimeout, setDebounceTimeout] = useState(null);
+    const isClickInProgress = useRef(false); // Ref to track if click is being processed
     const carouselItemsRef = useRef([]);
-    const [canClick, setCanClick] = useState(true);  // State to manage throttling
 
     useEffect(() => {
         const carouselList = carouselListRef.current;
         const elems = carouselItemsRef.current;
 
         const handleClick = (event) => {
-            // If the cooldown period is active, return early
-            if (!canClick) return;
+            // If a click is already in progress, ignore the new click
+            if (isClickInProgress.current) return;
 
-            // Immediately process the first click
-            setCanClick(false); // Block further clicks
+            // Debounce: Ignore clicks within 500ms after the last click
+            if (debounceTimeout) {
+                clearTimeout(debounceTimeout);
+            }
 
-            // Process the click
+            // Set debounce timeout to process the click after 500ms
+            const newDebounceTimeout = setTimeout(() => {
+                processClick(event);
+            }, 100);
+
+            setDebounceTimeout(newDebounceTimeout);
+        };
+
+        const processClick = (event) => {
+            // Mark that a click is being processed
+            isClickInProgress.current = true;
+
+            if (!event.target) return;
+
+            // Find the closest carousel item
             var newActive = event.target.closest('.carousel__item');
-            var isItem = newActive.closest('.carousel__item');
 
-            if (!isItem || newActive === null || newActive.classList.contains('carousel__item_active')) {
+            // If no item found or invalid target, reset and return
+            if (!newActive) {
+                isClickInProgress.current = false; // Reset flag
+                return;
+            }
+
+            // Avoid processing if the clicked item is already active
+            if (newActive.classList.contains('carousel__item_active')) {
+                isClickInProgress.current = false; // Reset flag
                 return;
             }
 
             update(newActive);
 
-            // Set a timeout to allow another click after a short cooldown period (e.g., 300ms)
-            setTimeout(() => {
-                setCanClick(true); // Re-enable clicks after the cooldown period
-            }, 300);  // Cooldown period (no clicks allowed during this time)
+            // Reset the flag after the action completes
+            isClickInProgress.current = false;
         };
 
         const update = (newActive) => {
@@ -71,8 +93,13 @@ function Carousel() {
             if (carouselList) {
                 carouselList.removeEventListener('click', handleClick);
             }
+
+            // Cleanup timeout if the component unmounts
+            if (debounceTimeout) {
+                clearTimeout(debounceTimeout);
+            }
         };
-    }, [canClick]);
+    }, [debounceTimeout]);
 
     return (
         <section classname="project-section" id="projects">
