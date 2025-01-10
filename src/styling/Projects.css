@@ -1,93 +1,84 @@
 .project-section {
-    z-index:0;
+    z-index: 0;
 }
 
 .project-header {
-    text-align:center;
+    text-align: center;
 }
 
-.project-header h{
-    display:inline-block;
-    color:white;
-    border-bottom: 3px solid rgb(173, 216, 230);
+.project-header h {
+    display: inline-block;
+    color: white;
     font-size: 35px;
     margin-top: 100px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 1000;
+    --a: -45deg;
+    --t: 8px;
+    --_s: calc(var(--t)*cos(var(--a)));
+    background: linear-gradient(var(--a), #0000 var(--_s), lightskyblue 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
+    padding: 5px;
 }
 
 .allProjects {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 125px;
     margin: 100px;
+    font-family: 'Brush Script MT', cursive;
 }
 
-.project1 {
+.allProjects>* {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 50px;
+    width: 800px;
+    height: 500px;
+    border: 5px solid aliceblue;
+}
+
+.joystickInsight {
     background-color: lightseagreen;
-    border-radius: 50px;
-    width: 800px;
-    height: 500px;
-    color: rgb(0, 0, 0);
 }
 
-.information1 {
+.joystickInfo {
     position: relative;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     margin: 50px;
 }
 
-.information1 img {
+.joystickInfo img {
     height: 300px;
 }
 
-.project2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.portfolio {
     background-color: lightskyblue;
-    border-radius: 50px;
-    width: 800px;
-    height: 500px;
     margin-left: auto;
-    color: black;
 }
 
-.information2 {
+.portfolioInfo {
     position: relative;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 50px;
+    margin: 10px;
 }
 
-.information2 img {
+.portfolioInfo img {
     height: 300px;
     border-radius: 50px;
 }
 
-.project3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: whitesmoke;
-    border-radius: 50px;
-    width: 800px;
-    height: 500px;
-    color: black;
+.PowerV2G {
+    background-color: grey;
 }
 
-.information3 {
+.POwerV2GInfo {
     position: relative;
     display: flex;
     align-items: center;
     margin: 50px;
 }
-
-
-
-
-

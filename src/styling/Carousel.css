@@ -1,0 +1,123 @@
+.project-section {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-header {
+    text-align: center;
+}
+
+.project-header h {
+    display: inline-block;
+    color: white;
+    font-size: 35px;
+    margin-top: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    --a: -45deg;
+    --t: 8px;
+    --_s: calc(var(--t)*cos(var(--a)));
+    background: linear-gradient(var(--a), #0000 var(--_s), lightskyblue 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
+    padding: 5px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.carousel__list {
+    display: flex;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 49px;
+    margin-top:0px;
+}
+
+.carousel__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    width: 800px;
+    height: 500px;
+    border: 3px solid aliceblue;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+.carousel__item:nth-child(1) {
+    background: lightseagreen;
+}
+
+.carousel__item:nth-child(2) {
+    background: lightskyblue;
+}
+
+.carousel__item:nth-child(3) {
+    background: grey;
+}
+
+.carousel__item:nth-child(4) {
+    background: lightseagreen;
+}
+
+.carousel__item:nth-child(5) {
+    background: lightskyblue;
+}
+
+.carousel__item[data-pos="0"] {
+    z-index: 5;
+}
+
+.carousel__item[data-pos="-1"],
+.carousel__item[data-pos="1"] {
+    opacity: 0.7;
+    filter: blur(1px) grayscale(10%);
+}
+
+.carousel__item[data-pos="-1"] {
+    transform: translateX(-40%) scale(0.9);
+    z-index: 4;
+}
+
+.carousel__item[data-pos="1"] {
+    transform: translateX(40%) scale(0.9);
+    z-index: 4;
+}
+
+.carousel__item[data-pos="-2"],
+.carousel__item[data-pos="2"] {
+    opacity: 0.4;
+    filter: blur(3px) grayscale(20%);
+}
+
+.carousel__item[data-pos="-2"] {
+    transform: translateX(-70%) scale(0.8);
+    z-index: 3;
+}
+
+.carousel__item[data-pos="2"] {
+    transform: translateX(70%) scale(0.8);
+    z-index: 3;
+}
+
+.joystickInfo img {
+    height: 300px;
+}
+
+.portfolioInfo img {
+    height: 300px;
+    border-radius: 50px;
+}

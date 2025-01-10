@@ -24,11 +24,15 @@ footer {
 
 .footer-header h {
     color: rgb(255, 255, 255);
-    border-bottom: 3px solid rgb(173, 216, 230);
     font-size: 35px;
     margin-top: 100px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 1000;
+    --a: -45deg;
+    --t: 8px;
+    --_s: calc(var(--t)*cos(var(--a)));
+    background: linear-gradient(var(--a), #0000 var(--_s), lightskyblue 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
+    padding: 5px;
 }
 
 ul {
@@ -47,7 +51,7 @@ ul {
 
 .link-bar .icon-content {
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Brush Script MT', cursive;
     font-weight: 1000;
     margin: 0 10px;
     position: relative;
