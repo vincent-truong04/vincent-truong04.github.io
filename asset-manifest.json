@@ -1,18 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5714a932.css",
-    "main.js": "/static/js/main.53a92eb7.js",
+    "main.css": "/static/css/main.e6d6e359.css",
+    "main.js": "/static/js/main.2a8c8c5b.js",
     "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
     "static/media/Headshot.png": "/static/media/Headshot.d153af80d8051afcda71.png",
     "static/media/Portfolio.png": "/static/media/Portfolio.0825d7b05c2d4e1983b0.png",
     "static/media/Joystick_Icon.png": "/static/media/Joystick_Icon.76cfe076805eb64de6ee.png",
+    "static/media/java.svg": "/static/media/java.3dec1fe704244f3cf61d9c1aa9e5707c.svg",
+    "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/cplusplus.svg": "/static/media/cplusplus.a776a608546a79750b150829bc9b099e.svg",
+    "static/media/matlab.svg": "/static/media/matlab.27c7151ae26a4b76b99ac1186fa9bbbb.svg",
+    "static/media/python.svg": "/static/media/python.026a62687ef705a39cfc755d7457859c.svg",
     "index.html": "/index.html",
-    "main.5714a932.css.map": "/static/css/main.5714a932.css.map",
-    "main.53a92eb7.js.map": "/static/js/main.53a92eb7.js.map",
+    "static/media/css.svg": "/static/media/css.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
+    "static/media/html.svg": "/static/media/html.c1bb84e022ca9d76984d4b943bd678fd.svg",
+    "main.e6d6e359.css.map": "/static/css/main.e6d6e359.css.map",
+    "main.2a8c8c5b.js.map": "/static/js/main.2a8c8c5b.js.map",
     "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5714a932.css",
-    "static/js/main.53a92eb7.js"
+    "static/css/main.e6d6e359.css",
+    "static/js/main.2a8c8c5b.js"
   ]
 }
