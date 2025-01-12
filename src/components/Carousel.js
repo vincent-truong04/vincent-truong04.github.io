@@ -1,12 +1,14 @@
 import '../styling/Carousel.css';
 import JoystickIcon from '../images/Joystick_Icon.png';
 import PortfolioPic from '../images/Portfolio.png';
+import CanvasCraft from '../images/CanvasCraft.png';
+import V2G from '../images/V2G.png';
 import React, { useRef, useState, useEffect } from 'react';
 
 function Carousel() {
     const carouselListRef = useRef(null);
     const [debounceTimeout, setDebounceTimeout] = useState(null);
-    const isClickInProgress = useRef(false); // Ref to track if click is being processed
+    const isClickInProgress = useRef(false);
     const carouselItemsRef = useRef([]);
 
     useEffect(() => {
@@ -14,15 +16,12 @@ function Carousel() {
         const elems = carouselItemsRef.current;
 
         const handleClick = (event) => {
-            // If a click is already in progress, ignore the new click
             if (isClickInProgress.current) return;
 
-            // Debounce: Ignore clicks within 500ms after the last click
             if (debounceTimeout) {
                 clearTimeout(debounceTimeout);
             }
 
-            // Set debounce timeout to process the click after 500ms
             const newDebounceTimeout = setTimeout(() => {
                 processClick(event);
             }, 100);
@@ -31,39 +30,35 @@ function Carousel() {
         };
 
         const processClick = (event) => {
-            // Mark that a click is being processed
             isClickInProgress.current = true;
 
             if (!event.target) return;
 
-            // Find the closest carousel item
             var newActive = event.target.closest('.carousel__item');
 
-            // If no item found or invalid target, reset and return
             if (!newActive) {
-                isClickInProgress.current = false; // Reset flag
+                isClickInProgress.current = false;
                 return;
             }
 
-            // Avoid processing if the clicked item is already active
             if (newActive.classList.contains('carousel__item_active')) {
-                isClickInProgress.current = false; // Reset flag
+                isClickInProgress.current = false;
                 return;
             }
 
             update(newActive);
 
-            // Reset the flag after the action completes
             isClickInProgress.current = false;
         };
 
         const update = (newActive) => {
             const newActivePos = newActive.dataset.pos;
 
-            const current = elems.find((elem) => elem.dataset.pos == 0);
-            const prev = elems.find((elem) => elem.dataset.pos == -1);
-            const next = elems.find((elem) => elem.dataset.pos == 1);
-            const first = elems.find((elem) => elem.dataset.pos == -2);
+            // eslint-disable-next-line
+            const current = elems.find((elem) => elem.dataset.pos == 0); // eslint-disable-next-line
+            const prev = elems.find((elem) => elem.dataset.pos == -1); // eslint-disable-next-line
+            const next = elems.find((elem) => elem.dataset.pos == 1); // eslint-disable-next-line
+            const first = elems.find((elem) => elem.dataset.pos == -2); // eslint-disable-next-line
             const last = elems.find((elem) => elem.dataset.pos == 2);
 
             if (!current) return;
@@ -94,7 +89,6 @@ function Carousel() {
                 carouselList.removeEventListener('click', handleClick);
             }
 
-            // Cleanup timeout if the component unmounts
             if (debounceTimeout) {
                 clearTimeout(debounceTimeout);
             }
@@ -109,7 +103,7 @@ function Carousel() {
             <div className="carousel">
                 <ul className="carousel__list" ref={carouselListRef}>
                     <div className="carousel__item" data-pos={-2} ref={(el) => (carouselItemsRef.current[0] = el)}>
-                        <h1>JoystickInsight</h1>
+                        <h1>Joystick Insight</h1>
                         <div className="joystickInfo">
                             <img src={JoystickIcon} alt="JoystickIcon" />
                             <p>
@@ -122,6 +116,7 @@ function Carousel() {
                     <div className="carousel__item" data-pos={-1} ref={(el) => (carouselItemsRef.current[1] = el)}>
                         <h1>Portfolio Website</h1>
                         <div className="portfolioInfo">
+                            <img src={PortfolioPic} alt="PortfolioPic" />
                             <p>
                                 Created personal portfolio website deployed on GitHub Pages.
                                 Written in HTML and CSS, using React as well as Framer Motion for
@@ -130,20 +125,29 @@ function Carousel() {
                         </div>
                     </div>
                     <div className="carousel__item" data-pos={0} ref={(el) => (carouselItemsRef.current[2] = el)}>
-                        <h1>More in Progress!</h1>
+                        <h1>Power Vehicle-to-grid (V2G) Model</h1>
                         <div className="PowerV2GInfo">
-                            <p>More projects on the way!</p>
+                            <img src={V2G} alt="V2G" />
+                            <p>
+                                Modeled a vehicle-to-grid (V2G) system in Simulink. Analyzed the system by examining outputted active power from renewable
+                                energy sources and residential loads alongside different regulations for charging and discharging cycles.
+                            </p>
                         </div>
                     </div>
                     <div className="carousel__item" data-pos={1} ref={(el) => (carouselItemsRef.current[3] = el)}>
-                        <h1>More in Progress!</h1>
-                        <div className="PowerV2GInfo">
-                            <p>More projects on the way!</p>
+                        <h1>Canvas Craft</h1>
+                        <div className="canvasCraftInfo">
+                            <img src={CanvasCraft} alt="CanvasCraft" />
+                            <p>
+                                Developed a paint program using Python and Tkinter, designed to emulate the functionality of MS Paint. 
+                                Features include adjustable brush sizes and shapes with a visual indicator, color selection 
+                                and essential file operations such as New, Save As, and Exit via a file menu.
+                                Users can clear the canvas and save artwork as PNG file, utilizing the PIL library for image processing.</p>
                         </div>
                     </div>
                     <div className="carousel__item" data-pos={2} ref={(el) => (carouselItemsRef.current[4] = el)}>
                         <h1>More in Progress!</h1>
-                        <div className="PowerV2GInfo">
+                        <div className="moreToCome">
                             <p>More projects on the way!</p>
                         </div>
                     </div>

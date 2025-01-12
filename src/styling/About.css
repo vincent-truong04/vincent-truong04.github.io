@@ -37,7 +37,7 @@
 }
 
 .aboutContent-container p {
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Inter';
     font-size: 1.1rem;
     color: white;
     line-height: 30px;
@@ -77,7 +77,7 @@ figcaption {
     color: white;
     text-align: center;
     margin-top: 8px;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Inter';
 }
 
 .skill-icons .col1 figure,

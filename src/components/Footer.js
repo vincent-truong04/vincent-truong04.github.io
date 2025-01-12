@@ -10,11 +10,7 @@ function Footer() {
             </div>
             <ul class="link-bar">
                 <li class="icon-content">
-                    <a
-                        href="https://www.linkedin.com/in/vincent-t2468/"
-                        aria-label="LinkedIn"
-                        data-social="linkedin"
-                    >
+                    <a href="https://www.linkedin.com/in/vincent-t2468/" aria-label="LinkedIn" data-social="linkedin" target="_blank" rel="noopener noreferrer">
                         <div class="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +29,7 @@ function Footer() {
                     <div class="tooltip">LinkedIn</div>
                 </li>
                 <li class="icon-content">
-                    <a href="https://github.com/vincent-truong04" aria-label="GitHub" data-social="github">
+                    <a href="https://github.com/vincent-truong04" aria-label="GitHub" data-social="github" target="_blank" rel="noopener noreferrer">
                         <div class="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -52,11 +48,7 @@ function Footer() {
                     <div class="tooltip">GitHub</div>
                 </li>
                 <li class="icon-content">
-                    <a
-                        href="https://www.instagram.com/vincent_truong04/"
-                        aria-label="Instagram"
-                        data-social="instagram"
-                    >
+                    <a href="https://www.instagram.com/vincent_truong04/" aria-label="Instagram" data-social="instagram" target="_blank" rel="noopener noreferrer">
                         <div class="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +67,7 @@ function Footer() {
                     <div class="tooltip">Instagram</div>
                 </li>
                 <li class="icon-content">
-                    <a href="mailto:vincent.truong.22@cnu.edu" aria-label="Email" data-social="email">
+                    <a href="mailto:vincent.truong.22@cnu.edu" aria-label="Email" data-social="email" target="_blank" rel="noopener noreferrer">
                         <div class="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
