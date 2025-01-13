@@ -51,8 +51,7 @@ ul {
 
 .link-bar .icon-content {
     font-size: 50px;
-    font-family: 'Brush Script MT', cursive;
-    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0 10px;
     position: relative;
 }

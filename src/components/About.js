@@ -20,6 +20,12 @@ function About() {
                     <div class="img-container">
                         <img src={headshot} alt="headshot" />
                     </div>
+                    <a href='https://drive.google.com/file/d/1YthN8CGM-z-IedFAOombgqULHRla6-ml/view?usp=sharing' target="_blank" rel="noreferrer" class="button">
+                        <span class="button_lg">
+                            <span class="button_sl"></span>
+                            <span class="button_text">Resume</span>
+                        </span>
+                    </a>
                     <p>
                         Hello! My name is Vincent Truong, and I am a junior at Christopher Newport University pursuing a degree in Computer Engineering with a minor in Leadership.
                         My academic journey combines technical expertise with strong leadership skills, preparing me to tackle complex challenges in engineering and technology.

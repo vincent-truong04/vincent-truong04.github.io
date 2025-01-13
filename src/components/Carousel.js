@@ -107,9 +107,10 @@ function Carousel() {
                         <div className="joystickInfo">
                             <img src={JoystickIcon} alt="JoystickIcon" />
                             <p>
-                                A full-stack program used to quickly test joystick hardware
-                                functionality and assess usability of newly created configuration
-                                files. Coded in Java, alongside JavaFX and the JInput library.
+                                Developed a full-stack program used to quickly test joystick hardware functionality during my internship position at Trident Systems. 
+                                For each new joystick, new configurtion files were written to map each button to a program function.
+                                The program analyzed event data in real time by parsing through raw binary data and mapped it to the config files to confirm the accuracy of newly created configs.
+                                The tester utilized Java for backend and JavaFX for frontend, and also used JInput library to aid in object-oriented programming.
                             </p>
                         </div>
                     </div>
@@ -118,9 +119,11 @@ function Carousel() {
                         <div className="portfolioInfo">
                             <img src={PortfolioPic} alt="PortfolioPic" />
                             <p>
-                                Created personal portfolio website deployed on GitHub Pages.
-                                Written in HTML and CSS, using React as well as Framer Motion for
-                                animations.
+
+                                Designed and developed a personal portfolio website to showcase my skills, projects, and experiences.
+                                The website was created using modern web technologies, including HTML, CSS, and React, to ensure a dynamic and responsive user experience. 
+                                Integrated Framer Motion to add smooth and visually appealing animations, and deployed the website on GitHub Pages for easy sharing and continuous access, 
+                                utilizing version control through Git to manage updates and improvements.
                             </p>
                         </div>
                     </div>
@@ -129,8 +132,8 @@ function Carousel() {
                         <div className="PowerV2GInfo">
                             <img src={V2G} alt="V2G" />
                             <p>
-                                Modeled a vehicle-to-grid (V2G) system in Simulink. Analyzed the system by examining outputted active power from renewable
-                                energy sources and residential loads alongside different regulations for charging and discharging cycles.
+                                Modeled a vehicle-to-grid (V2G) system in Simulink during my research position at Christopher Newport University. Analyzed the system by comparing outputted active power from renewable
+                                energy sources and residential loads alongside different regulations set for charging and discharging cycles.
                             </p>
                         </div>
                     </div>
@@ -139,16 +142,16 @@ function Carousel() {
                         <div className="canvasCraftInfo">
                             <img src={CanvasCraft} alt="CanvasCraft" />
                             <p>
-                                Developed a paint program using Python and Tkinter, designed to emulate the functionality of MS Paint. 
-                                Features include adjustable brush sizes and shapes with a visual indicator, color selection 
+                                Developed a paint program using Python and Tkinter, designed to emulate the functionality of MS Paint.
+                                Features include adjustable brush sizes and shapes with a visual indicator, color selection
                                 and essential file operations such as New, Save As, and Exit via a file menu.
                                 Users can clear the canvas and save artwork as PNG file, utilizing the PIL library for image processing.</p>
                         </div>
                     </div>
                     <div className="carousel__item" data-pos={2} ref={(el) => (carouselItemsRef.current[4] = el)}>
                         <h1>More in Progress!</h1>
-                        <div className="moreToCome">
-                            <p>More projects on the way!</p>
+                        <div className="moreToComeInfo">
+                            <p>There are many more projects to come, thank you for checking out my website!</p>
                         </div>
                     </div>
                 </ul>
