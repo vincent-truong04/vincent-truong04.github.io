@@ -80,11 +80,14 @@ a {
 
 .hero-section p2 {
   width: 25ch;
-  animation: typing 3.5s steps(25) 1s, blink .5s step-end infinite alternate, hideCursor 0.1s 8.5s forwards;;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 3px solid lightskyblue;
   border-color: lightskyblue;
+}
+
+.hero-section p2.typing-active {
+  animation: typing 2.5s steps(25) 1s, blink 0.5s step-end infinite alternate, hideCursor 0.1s 8.5s forwards;
 }
 
 @keyframes typing {
@@ -95,12 +98,12 @@ a {
 
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
 }
 
 @keyframes hideCursor {
   to {
-    border-right: none; /* Makes the cursor disappear */
+    border-right: none;
   }
 }
