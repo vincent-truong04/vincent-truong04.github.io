@@ -101,7 +101,7 @@ function Carousel() {
             <div className="project-header">
                 <h>Projects</h>
             </div>
-            <motion.div initial={{opacity: 0 }} whileInView={{y: 0, opacity: 1 }} transition={{ duration: 2, ease: "easeOut"}} viewport={{ once: true, amount: 0.5}} className="carousel">
+            <motion.div initial={{ y: "10%", opacity: 0 }} whileInView={{y: 0, opacity: 1 }} transition={{ duration: 1, ease: "easeOut"}} viewport={{ once: true, amount: 0.5}} className="carousel">
                 <ul className="carousel__list" ref={carouselListRef}>
                     <div className="carousel__item" data-pos={-2} ref={(el) => (carouselItemsRef.current[0] = el)}>
                         <h1>Joystick Insight</h1>

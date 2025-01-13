@@ -1,225 +1,261 @@
 .about-section {
-    background-color: rgba(2, 13, 35, 0.0);
-    z-index: 0;
-    text-align: center;
-    min-height: 100vh;
-    margin-left: 50px;
-    margin-right: 50px;
+  background-color: rgba(2, 13, 35, 0.0);
+  z-index: 0;
+  text-align: center;
+  min-height: 100vh;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .about-header h {
-    display: inline-block;
-    color: white;
-    font-size: 35px;
-    margin-top: 100px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    --a: -45deg;
-    --t: 8px;
-    --_s: calc(var(--t)*cos(var(--a)));
-    background: linear-gradient(var(--a), #0000 var(--_s), lightskyblue 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
-    padding: 5px;
+  display: inline-block;
+  color: white;
+  font-size: 35px;
+  margin-top: 100px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  --a: -45deg;
+  --t: 8px;
+  --_s: calc(var(--t)*cos(var(--a)));
+  background: linear-gradient(var(--a), #0000 var(--_s), lightskyblue 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
+  padding: 5px;
 }
 
 .aboutContent-container {
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .about-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 50%;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 50%;
+  text-align: left;
 }
 
 .aboutContent-container p {
-    font-family: 'Inter';
-    font-size: 1.1rem;
-    color: white;
-    line-height: 30px;
-    width: 65%;
+  font-family: 'Inter';
+  font-size: 1.1rem;
+  color: white;
+  line-height: 30px;
+  width: 65%;
 }
 
 .img-container img {
-    border-radius: 8px;
-    height: 300px;
-    width: auto;
-    border: 5px solid #0000;
-    border-radius: 12px;
-    background: linear-gradient(#000000, #000000) padding-box, conic-gradient(from var(--angle), lightskyblue, lightseagreen, lightskyblue) border-box;
+  border-radius: 8px;
+  height: 300px;
+  width: auto;
+  border: 5px solid #0000;
+  border-radius: 12px;
+  background: linear-gradient(#000000, #000000) padding-box, conic-gradient(from var(--angle), lightskyblue, lightseagreen, lightskyblue) border-box;
 }
 
 .skill-icons {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  width: 50%;
 }
 
 .skill-icons>* {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
 }
 
 .skill-icons img {
-    height: 90px;
+  height: 90px;
 }
 
 figcaption {
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    margin-top: 8px;
-    font-family: 'Inter';
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  font-family: 'Inter';
 }
 
 .skill-icons .col1 figure,
 .col2 figure,
 .col3 figure {
-    width: 200px;
-    height: 135px;
-    border: 5px solid #0000;
-    border-radius: 12px;
-    background: linear-gradient(#000000, #000000) padding-box, conic-gradient(from var(--angle), lightskyblue, lightseagreen, darkgrey, lightskyblue) border-box;
-    animation: 8s rotate linear infinite;
+  width: 200px;
+  height: 135px;
+  border: 5px solid #0000;
+  border-radius: 12px;
+  background: linear-gradient(#000000, #000000) padding-box, conic-gradient(from var(--angle), lightskyblue, lightseagreen, darkgrey, lightskyblue) border-box;
+  animation: 8s rotate linear infinite;
 }
 
 @keyframes rotate {
-    to {
-        --angle: 360deg;
-    }
+  to {
+    --angle: 360deg;
+  }
 }
 
 @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 .button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background: none;
-    color: #0f1923;
-    cursor: pointer;
-    position: relative;
-    padding: 8px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    transition: all .15s ease;
-    margin-top: 25px;
-    font-family: 'Inter';
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+  margin-top: 25px;
+  font-family: 'Inter';
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: rgb(54, 121, 117);
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+.Btn {
+  width: 45px;
+  height: 45px;
+  background: rgb(135, 206, 250, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 5px solid rgb(32, 178, 170, 0.5);
+  z-index: 10;
+}
+
+.Btn .arrow {
+  animation: bounce-up-down 1.5s ease-in-out infinite;
+}
+
+.arrow path {
+  fill: white;
+}
+
+@keyframes bounce-up-down {
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .button::before,
-  .button::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    left: 0;
-    height: calc(50% - 5px);
-    border: 1px solid #7D8082;
-    transition: all .15s ease;
+
+  50% {
+    transform: translateY(-4px);
   }
-  
-  .button::before {
-    top: 0;
-    border-bottom-width: 0;
-  }
-  
-  .button::after {
-    bottom: 0;
-    border-top-width: 0;
-  }
-  
-  .button:active,
-  .button:focus {
-    outline: none;
-  }
-  
-  .button:active::before,
-  .button:active::after {
-    right: 3px;
-    left: 3px;
-  }
-  
-  .button:active::before {
-    top: 3px;
-  }
-  
-  .button:active::after {
-    bottom: 3px;
-  }
-  
-  .button_lg {
-    position: relative;
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #0f1923;
-    overflow: hidden;
-    box-shadow: inset 0px 0px 0px 1px transparent;
-  }
-  
-  .button_lg::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 2px;
-    background-color: #0f1923;
-  }
-  
-  .button_lg::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 4px;
-    height: 4px;
-    background-color: #0f1923;
-    transition: all .2s ease;
-  }
-  
-  .button_sl {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    left: -8px;
-    width: 0;
-    background-color: rgb(54, 121, 117);
-    transform: skew(-15deg);
-    transition: all .2s ease;
-  }
-  
-  .button_text {
-    position: relative;
-  }
-  
-  .button:hover {
-    color: #0f1923;
-  }
-  
-  .button:hover .button_sl {
-    width: calc(100% + 15px);
-  }
-  
-  .button:hover .button_lg::after {
-    background-color: #fff;
-  }
+}

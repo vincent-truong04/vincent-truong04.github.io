@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 import './styling/App.css';
+import { motion } from 'framer-motion';
 
 function App() {
   return (

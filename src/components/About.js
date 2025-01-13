@@ -8,6 +8,7 @@ import java from "../svg/java.svg";
 import react from "../svg/react.svg";
 import css from "../svg/css.svg";
 import cplusplus from "../svg/cplusplus.svg";
+import upArrow from "../svg/up.svg";
 import { motion } from 'framer-motion';
 
 function About() {
@@ -18,16 +19,16 @@ function About() {
             </div>
             <div class="aboutContent-container">
                 <div class="about-description">
-                    <motion.div initial={{ y: "100%", opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut" }} viewport={{ once: true, amount: 0.9}} class="img-container">
+                    <motion.div initial={{ y: "100%", opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut" }} viewport={{ once: true, amount: 0.9 }} class="img-container">
                         <img src={headshot} alt="headshot" />
                     </motion.div>
-                    <motion.a initial={{opacity: 0 }} whileInView={{opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay:1}} viewport={{ once: true, amount: 0.9}} href='https://drive.google.com/file/d/1YthN8CGM-z-IedFAOombgqULHRla6-ml/view?usp=sharing' target="_blank" rel="noreferrer" class="button">
+                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 1 }} viewport={{ once: true, amount: 0.9 }} href='https://drive.google.com/file/d/1YthN8CGM-z-IedFAOombgqULHRla6-ml/view?usp=sharing' target="_blank" rel="noreferrer" class="button">
                         <span class="button_lg">
                             <span class="button_sl"></span>
                             <span class="button_text">Resume</span>
                         </span>
                     </motion.a>
-                    <motion.p initial={{opacity: 0 }} whileInView={{opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay:0.5}} viewport={{ once: true, amount: 1}}>
+                    <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }} viewport={{ once: true, amount: 1 }}>
                         Hello! My name is Vincent Truong, and I am a junior at Christopher Newport University pursuing a degree in Computer Engineering with a minor in Leadership.
                         My academic journey combines technical expertise with strong leadership skills, preparing me to tackle complex challenges in engineering and technology.
                         Outside of the classroom, I am an active member of Pi Kappa Alpha and a captain of men's varsity tennis. I am passionate about leveraging my skills to contribute to innovative projects and am eager to make an impact in the field of
@@ -35,7 +36,7 @@ function About() {
                     </motion.p>
                 </div>
                 <div class="skill-icons">
-                    <motion.div initial={{ x: "100%", opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut" }} viewport={{ once: true, amount: .2}} class="col1">
+                    <motion.div initial={{ x: "100%", opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut" }} viewport={{ once: true, amount: .2 }} class="col1">
                         <figure class="html-icon">
                             <img src={html} alt="html icon" />
                             <figcaption class="caption">HTML</figcaption>
@@ -45,7 +46,7 @@ function About() {
                             <figcaption class="caption">PYTHON</figcaption>
                         </figure>
                     </motion.div>
-                    <motion.div initial={{ x: "100%", opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }} viewport={{ once: true, amount: 0.9}} class="col2">
+                    <motion.div initial={{ x: "100%", opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }} viewport={{ once: true, amount: 0.9 }} class="col2">
                         <figure class="matlab-icon">
                             <img src={matlab} alt="matlab icon" />
                             <figcaption class="caption">MATLAB</figcaption>
@@ -60,7 +61,7 @@ function About() {
                         </figure>
 
                     </motion.div>
-                    <motion.div initial={{ x: "50%", opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 1 }} viewport={{ once: true, amount: 0.9}} class="col3">
+                    <motion.div initial={{ x: "50%", opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 1 }} viewport={{ once: true, amount: 0.9 }} class="col3">
                         <figure class="css-icon">
                             <img src={css} alt="css icon" />
                             <figcaption class="caption">CSS</figcaption>
@@ -70,7 +71,9 @@ function About() {
                             <figcaption class="caption">C++</figcaption>
                         </figure>
                     </motion.div>
-
+                    <a href="#hero" class="Btn">
+                        <svg className='arrow' xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="m12 6.414 7.293 7.293 1.414-1.414L12 3.586l-8.707 8.707 1.414 1.414L12 6.414z" /><path d="m3.293 18.293 1.414 1.414L12 12.414l7.293 7.293 1.414-1.414L12 9.586l-8.707 8.707z" /></svg>
+                    </a>
                 </div>
             </div>
         </section>
