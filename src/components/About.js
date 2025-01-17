@@ -22,7 +22,7 @@ function About() {
                     <motion.div initial={{ y: "100%", opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut" }} viewport={{ once: true, amount: 0.9 }} class="img-container">
                         <img src={headshot} alt="headshot" />
                     </motion.div>
-                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 1 }} viewport={{ once: true, amount: 0.9 }} href='https://drive.google.com/file/d/1jiwBk4MVrFOfWdL8rgkhJ4xUf_FVx6yl/view?usp=sharing' target="_blank" rel="noreferrer" class="button">
+                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5, ease: "easeOut", delay: 1 }} viewport={{ once: true, amount: 0.9 }} href='https://drive.google.com/file/d/1YJVYz7YWyI3NxR4hYKI01S-Bu0gT_1oU/view?usp=sharing' target="_blank" rel="noreferrer" class="button">
                         <span class="button_lg">
                             <span class="button_sl"></span>
                             <span class="button_text">Resume</span>
