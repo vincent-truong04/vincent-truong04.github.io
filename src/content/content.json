@@ -2,9 +2,9 @@
   "profile": {
     "name": "Vincent Truong",
     "greeting": "Welcome!",
-    "headline": "",
+    "headline": "MS ECE at Georgia Tech · RTL design and ASIC physical design",
     "about": [
-      "Hello! My name is Vincent Truong, and I am a junior at Christopher Newport University pursuing a degree in Computer Engineering with a minor in Leadership. My academic journey combines technical expertise with strong leadership skills, preparing me to tackle complex challenges in engineering and technology. Outside of the classroom, I am an active member of Pi Kappa Alpha and a captain of men's varsity tennis. I am passionate about leveraging my skills to contribute to innovative projects and am eager to make an impact in the field of computer engineering, especially in the area of embedded systems."
+      "Hello! My name is Vincent Truong, and I am a master's student in Electrical and Computer Engineering at Georgia Tech, concentrating in VLSI and Computer Systems. My focus is RTL design and ASIC physical design, and I am eager to contribute to innovative hardware projects through internships, co-ops and new-grad roles."
     ],
     "headshot": {
       "src": "/images/profile/headshot.png",
@@ -60,7 +60,7 @@
     },
     {
       "label": "Email",
-      "url": "mailto:vincent.truong.22@cnu.edu",
+      "url": "mailto:vincenttruong.usa@gmail.com",
       "icon": "email"
     }
   ],
