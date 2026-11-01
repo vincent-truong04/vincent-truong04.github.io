@@ -8,7 +8,6 @@ import java from "../svg/java.svg";
 import react from "../svg/react.svg";
 import css from "../svg/css.svg";
 import cplusplus from "../svg/cplusplus.svg";
-import upArrow from "../svg/up.svg";
 import { motion } from 'framer-motion';
 
 function About() {
