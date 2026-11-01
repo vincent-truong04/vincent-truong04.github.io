@@ -16,17 +16,27 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function App() {
   const root = useRef(null);
 
-  // Fade sections in as they scroll into view. With reduced motion nothing is hidden.
+  // Fade sections in as they scroll into view. Opacity only (not visibility) so
+  // links inside stay in the tab order; tabbing to one scrolls it in and reveals it.
+  // With reduced motion nothing is hidden.
   useGSAP(() => {
     const mm = gsap.matchMedia();
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       const items = gsap.utils.toArray('main [data-reveal]');
-      gsap.set(items, { autoAlpha: 0, y: 24 });
+      gsap.set(items, { opacity: 0, y: 24 });
       ScrollTrigger.batch(items, {
         start: 'top 90%',
         once: true,
-        onEnter: (batch) => gsap.to(batch, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.08 }),
+        onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.08 }),
       });
+
+      // Anything that takes keyboard focus is shown at once, even before its trigger.
+      const revealFocused = (event) => {
+        const item = event.target.closest('[data-reveal]');
+        if (item) gsap.to(item, { opacity: 1, y: 0, duration: 0.2, overwrite: 'auto' });
+      };
+      document.addEventListener('focusin', revealFocused);
+      return () => document.removeEventListener('focusin', revealFocused);
     });
   }, { scope: root });
 

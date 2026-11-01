@@ -24,3 +24,7 @@ yarn-error.log*
 
 # Claude Code project skills
 /.claude/
+
+# Playwright output
+/test-results/
+/playwright-report/
