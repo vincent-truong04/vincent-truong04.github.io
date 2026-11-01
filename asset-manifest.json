@@ -1,28 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea90de60.css",
-    "main.js": "/static/js/main.81522821.js",
-    "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
-    "static/media/Portfolio.png": "/static/media/Portfolio.73cf1d748f32c8faf16d.png",
-    "static/media/Headshot.png": "/static/media/Headshot.d153af80d8051afcda71.png",
-    "static/media/V2G.png": "/static/media/V2G.b364c669f1be8a62ac35.png",
-    "static/media/Joystick_Icon.png": "/static/media/Joystick_Icon.76cfe076805eb64de6ee.png",
-    "static/media/CanvasCraft.png": "/static/media/CanvasCraft.95212a84200276a0d23c.png",
-    "static/media/java.svg": "/static/media/java.3dec1fe704244f3cf61d9c1aa9e5707c.svg",
-    "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
-    "static/media/cplusplus.svg": "/static/media/cplusplus.a776a608546a79750b150829bc9b099e.svg",
-    "static/media/matlab.svg": "/static/media/matlab.27c7151ae26a4b76b99ac1186fa9bbbb.svg",
-    "static/media/python.svg": "/static/media/python.026a62687ef705a39cfc755d7457859c.svg",
+    "main.css": "/static/css/main.2fb54617.css",
+    "main.js": "/static/js/main.a61fa01f.js",
     "index.html": "/index.html",
-    "static/media/css.svg": "/static/media/css.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
-    "static/media/html.svg": "/static/media/html.c1bb84e022ca9d76984d4b943bd678fd.svg",
-    "static/media/up.svg": "/static/media/up.7130fec362a3e194e37f8962a3fe82e2.svg",
-    "main.ea90de60.css.map": "/static/css/main.ea90de60.css.map",
-    "main.81522821.js.map": "/static/js/main.81522821.js.map",
-    "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
+    "main.2fb54617.css.map": "/static/css/main.2fb54617.css.map",
+    "main.a61fa01f.js.map": "/static/js/main.a61fa01f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea90de60.css",
-    "static/js/main.81522821.js"
+    "static/css/main.2fb54617.css",
+    "static/js/main.a61fa01f.js"
   ]
 }
