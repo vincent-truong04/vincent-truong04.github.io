@@ -71,7 +71,7 @@
       "date": "",
       "summary": "Developed a full-stack program used to quickly test joystick hardware functionality during my internship position at Trident Systems.",
       "description": [
-        "Developed a full-stack program used to quickly test joystick hardware functionality during my internship position at Trident Systems. For each new joystick, new configurtion files were written to map each button to a program function. The program analyzed event data in real time by parsing through raw binary data and mapped it to the config files to confirm the accuracy of newly created configs. The tester utilized Java for backend and JavaFX for frontend, and also used JInput library to aid in object-oriented programming."
+        "Developed a full-stack program used to quickly test joystick hardware functionality during my internship position at Trident Systems. For each new joystick, new configuration files were written to map each button to a program function. The program analyzed event data in real time by parsing through raw binary data and mapped it to the config files to confirm the accuracy of newly created configs. The tester utilized Java for backend and JavaFX for frontend, and also used JInput library to aid in object-oriented programming."
       ],
       "context": "Trident Systems internship",
       "tags": [
