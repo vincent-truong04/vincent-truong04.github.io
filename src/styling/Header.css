@@ -11,7 +11,7 @@ header {
     box-shadow: 0 5px 5px rgb(49, 97, 91);
 }
 
-.logo h {
+.logo span {
   font-size: 18px;
   color: #ffffff;
   font-family: inherit;

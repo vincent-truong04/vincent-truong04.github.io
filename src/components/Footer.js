@@ -6,18 +6,18 @@ function Footer() {
     return (
         <footer id="contact">
             <div className="footer-header">
-                <h>Contact Me</h>
+                <h2>Contact Me</h2>
             </div>
-            <ul class="link-bar">
-                <li class="icon-content">
+            <ul className="link-bar">
+                <li className="icon-content">
                     <a href="https://www.linkedin.com/in/vincent-t2468/" aria-label="LinkedIn" data-social="linkedin" target="_blank" rel="noopener noreferrer">
-                        <div class="filled"></div>
+                        <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
                             fill="currentColor"
-                            class="bi bi-linkedin"
+                            className="bi bi-linkedin"
                             viewBox="0 0 16 16"
                         >
                             <path
@@ -26,17 +26,17 @@ function Footer() {
                             ></path>
                         </svg>
                     </a>
-                    <div class="tooltip">LinkedIn</div>
+                    <div className="tooltip">LinkedIn</div>
                 </li>
-                <li class="icon-content">
+                <li className="icon-content">
                     <a href="https://github.com/vincent-truong04" aria-label="GitHub" data-social="github" target="_blank" rel="noopener noreferrer">
-                        <div class="filled"></div>
+                        <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
                             fill="currentColor"
-                            class="bi bi-github"
+                            className="bi bi-github"
                             viewBox="0 0 16 16"
                         >
                             <path
@@ -45,17 +45,17 @@ function Footer() {
                             ></path>
                         </svg>
                     </a>
-                    <div class="tooltip">GitHub</div>
+                    <div className="tooltip">GitHub</div>
                 </li>
-                <li class="icon-content">
+                <li className="icon-content">
                     <a href="https://www.instagram.com/vincent_truong04/" aria-label="Instagram" data-social="instagram" target="_blank" rel="noopener noreferrer">
-                        <div class="filled"></div>
+                        <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
                             fill="currentColor"
-                            class="bi bi-instagram"
+                            className="bi bi-instagram"
                             viewBox="0 0 16 16"
                         >
                             <path
@@ -64,17 +64,17 @@ function Footer() {
                             ></path>
                         </svg>
                     </a>
-                    <div class="tooltip">Instagram</div>
+                    <div className="tooltip">Instagram</div>
                 </li>
-                <li class="icon-content">
-                    <a href="mailto:vincent.truong.22@cnu.edu" aria-label="Email" data-social="email" target="_blank" rel="noopener noreferrer">
-                        <div class="filled"></div>
+                <li className="icon-content">
+                    <a href="mailto:vincent.truong.22@cnu.edu" aria-label="Email" data-social="email">
+                        <div className="filled"></div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
                             fill="currentColor"
-                            class="bi bi-instagram"
+                            className="bi bi-instagram"
                             viewBox="0 0 16 16"
                         >
                             <path
@@ -83,7 +83,7 @@ function Footer() {
                             ></path>
                         </svg>
                     </a>
-                    <div class="tooltip">Email</div>
+                    <div className="tooltip">Email</div>
                 </li>
             </ul>
 

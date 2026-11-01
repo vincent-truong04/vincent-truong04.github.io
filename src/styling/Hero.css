@@ -18,11 +18,11 @@
   color: lightseagreen;
 }
 
-.hero-section p1 {
+.hero-greeting {
   margin-bottom: 10px;
 }
 
-.hero-section p2 {
+.hero-name {
   margin-bottom: 50px;
 }
 
@@ -79,7 +79,7 @@ a {
   opacity: 1;
 }
 
-.hero-section p2 {
+.hero-name {
   width: 25ch;
   white-space: nowrap;
   overflow: hidden;
@@ -87,7 +87,7 @@ a {
   border-color: lightskyblue;
 }
 
-.hero-section p2.typing-active {
+.hero-name.typing-active {
   animation: typing 2.5s steps(25) 1s, blink 0.5s step-end infinite alternate, hideCursor 0.1s 8.5s forwards;
 }
 

@@ -30,21 +30,11 @@ html {
   backface-visibility: hidden;
   position: absolute;
   animation: move;
-  animation-duration: 35;
+  animation-duration: 35s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-
-.background span:nth-child(0) {
-  color: #20b2aa;
-  top: 77%;
-  left: 45%;
-  animation-duration: 53s;
-  animation-delay: -114s;
-  transform-origin: -4vw 19vh;
-  box-shadow: -2vmin 0 0.9960056581096259vmin currentColor;
-}
 
 .background span:nth-child(1) {
   color: #add8e6;

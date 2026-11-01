@@ -5,9 +5,9 @@ function Header(){
     return(
         <header>
             <div className="logo">
-                <h>V.T.</h>
+                <span>V.T.</span>
             </div>
-            <nav classname="header-nav">
+            <nav className="header-nav">
                 <a href="#hero">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
