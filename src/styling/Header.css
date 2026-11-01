@@ -1,79 +1,65 @@
-header {
-    position: sticky;
-    top:0;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(54, 121, 117);
-    margin:0;
-    z-index: 10;
-    box-shadow: 0 5px 5px rgb(49, 97, 91);
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
 }
 
-.logo span {
-  font-size: 18px;
-  color: #ffffff;
-  font-family: inherit;
-  font-weight: 800;
-  margin: 10px;
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  min-height: 60px;
 }
 
-nav {
-    display: flex;
-    gap: 1.5rem;
-    margin-right: 1.5rem;
-    margin:10px;
+.site-header__logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
-nav a {
-  font-size: 18px;
-  color: #ffffff;
-  font-family: inherit;
-  font-weight: 800;
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-left: auto;
+}
+
+.site-header__nav a {
+  padding: 10px 0;
+  color: var(--muted);
+  font-size: 1.0625rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-header__nav a:hover {
+  color: var(--text);
+}
+
+.theme-toggle {
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
   cursor: pointer;
-  position: relative;
-  border: none;
-  background: none;
-  text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
 }
 
-nav a:focus,
-nav a:hover {
-  color: #535353;
+.theme-toggle[aria-pressed="true"] {
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
-nav a:focus:after,
-nav a:hover:after {
-  width: 100%;
-  left: 0%;
-}
+@media (max-width: 520px) {
+  .site-header__nav {
+    gap: 4px 14px;
+  }
 
-nav a:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: lightskyblue;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
-}
-
-.logo {
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    height: 40px;
-    width: auto;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  .site-header__nav a {
+    font-size: 1rem;
+  }
 }

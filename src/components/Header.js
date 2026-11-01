@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styling/Header.css';
+import { sections } from '../content';
 
-function Header(){
-    return(
-        <header>
-            <div className="logo">
-                <span>V.T.</span>
+const readTheme = () => document.documentElement.dataset.theme
+    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+function Header() {
+    const [theme, setTheme] = useState(readTheme);
+
+    const toggleTheme = () => {
+        const next = theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        try {
+            localStorage.setItem('theme', next);
+        } catch (e) {
+            // Storage can be blocked; the choice then lasts for this visit only.
+        }
+        setTheme(next);
+    };
+
+    return (
+        <header className="site-header">
+            <div className="container site-header__inner">
+                <a href="#hero" className="site-header__logo">V.T.</a>
+                <nav className="site-header__nav" aria-label="Sections">
+                    {sections.map((section) => (
+                        <a key={section.id} href={`#${section.id}`}>{section.label}</a>
+                    ))}
+                </nav>
+                <button
+                    type="button"
+                    className="theme-toggle mono"
+                    onClick={toggleTheme}
+                    aria-pressed={theme === 'dark'}
+                >
+                    Dark
+                </button>
             </div>
-            <nav className="header-nav">
-                <a href="#hero">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
         </header>
     );
 }

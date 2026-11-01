@@ -1,0 +1,138 @@
+.projects-root {
+  position: relative;
+}
+
+.projects__wire {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.projects__wire path {
+  fill: none;
+  stroke: var(--wire);
+  stroke-width: 2;
+  visibility: hidden;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: clamp(20px, 3vw, 32px);
+  transition: border-color 0.2s;
+}
+
+.project:hover,
+.project:focus-within {
+  border-color: var(--wire);
+}
+
+.project:hover .pins i,
+.project:focus-within .pins i {
+  background: var(--wire);
+}
+
+.project__head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project__designator,
+.project__context {
+  color: var(--muted);
+}
+
+.project h3 {
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.project__image {
+  border: 1px solid var(--grid);
+  background: var(--surface);
+}
+
+.project__image img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  padding: 12px;
+}
+
+.project__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.project__links a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Tools hang off the bottom edge like pin labels. */
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed var(--grid);
+}
+
+.project__tags li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.project__tags li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--line);
+}
+
+.project:hover .project__tags li::before,
+.project:focus-within .project__tags li::before {
+  background: var(--wire);
+}
+
+.project--empty {
+  justify-content: center;
+  gap: 12px;
+  border-style: dashed;
+  text-align: center;
+}
+
+.project--empty p {
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,43 @@
+.section {
+  position: relative;
+  padding-block: clamp(64px, 10vw, 128px);
+  border-top: 1px solid var(--line);
+}
+
+.section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.section__designator {
+  align-self: flex-start;
+  color: var(--wire-text);
+}
+
+.section__head h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Macro: a 1px outlined cell with a pin marker at each corner. */
+.macro {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.pins i {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--line);
+}
+
+.pins i:nth-child(1) { top: -4px; left: -4px; }
+.pins i:nth-child(2) { top: -4px; right: -4px; }
+.pins i:nth-child(3) { bottom: -4px; left: -4px; }
+.pins i:nth-child(4) { bottom: -4px; right: -4px; }

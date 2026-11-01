@@ -2,32 +2,42 @@ import React from 'react';
 import '../styling/Footer.css';
 import content from '../content';
 import contactIcons from './contactIcons';
+import Section from './Section';
 
-function Footer() {
-    const currentYear = new Date().getFullYear();
+// Visible text for each link: the address without its scheme or trailing slash.
+const display = (url) => url.replace(/^mailto:|^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+
+export function Contact() {
     return (
-        <footer id="contact">
-            <div className="footer-header">
-                <h2 className="section-title">Contact Me</h2>
-            </div>
-            <ul className="link-bar">
+        <Section id="contact">
+            <ul className="contact" data-reveal>
                 {content.contact.map((link) => {
                     const external = !link.url.startsWith('mailto:');
                     return (
-                        <li className="icon-content" key={link.icon}>
-                            <a href={link.url} aria-label={link.label} data-social={link.icon} {...(external && { target: '_blank', rel: 'noopener noreferrer' })}>
-                                <div className="filled"></div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                                    <path d={contactIcons[link.icon]} fill="currentColor"></path>
+                        <li key={link.icon}>
+                            <a className="contact__link" href={link.url} {...(external && { target: '_blank', rel: 'noopener noreferrer' })}>
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d={contactIcons[link.icon]} />
                                 </svg>
+                                <span className="contact__label">{link.label}</span>
+                                <span className="contact__url mono">{display(link.url)}</span>
                             </a>
-                            <div className="tooltip">{link.label}</div>
                         </li>
                     );
                 })}
             </ul>
+        </Section>
+    );
+}
 
-            <p className="copyright">{content.profile.name} ©{currentYear}</p>
+function Footer() {
+    const currentYear = new Date().getFullYear();
+    return (
+        <footer className="site-footer">
+            <div className="container site-footer__inner">
+                <p className="mono">{content.profile.name} ©{currentYear}</p>
+                <a className="mono" href="#hero">Back to top ↑</a>
+            </div>
         </footer>
     );
 }

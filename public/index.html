@@ -5,10 +5,21 @@
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/VT_logo.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/VT_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Portfolio of Vincent Truong: about, projects and contact." />
+    <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a1814" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="Vincent Truong, MS ECE at Georgia Tech: RTL design and ASIC physical design projects, about and contact." />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Vincent Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Martian+Mono:wght@400;500&display=swap" />
+    <script>
+      // Apply a saved light/dark choice before first paint.
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
+    <title>Vincent Truong · Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

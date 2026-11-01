@@ -4,7 +4,8 @@
   "homepage": "https://vincent-truong04.github.io",
   "private": true,
   "dependencies": {
-    "framer-motion": "^11.16.0",
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1"

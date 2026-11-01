@@ -1,55 +1,174 @@
+/* Tapeout theme: warm grey die, indigo metal, amber routing. */
 :root {
-  --color-heading: #ffffff;
-  --color-underline: lightskyblue;
+  --bg: #faf9f7;
+  --surface: #f0eeea;
+  --text: #27241d;
+  --muted: #625d52;
+  --primary: #35469c;
+  --on-primary: #faf9f7;
+  --wire: #cb6e17;
+  --wire-text: #b44d12;
+  --line: #857f72;
+  --grid: #d3cec4;
+
+  --font-sans: 'Familjen Grotesk', system-ui, sans-serif;
+  --font-mono: 'Martian Mono', ui-monospace, monospace;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1200px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1814;
+    --surface: #27241d;
+    --text: #e8e6e1;
+    --muted: #a39e93;
+    --primary: #98aeeb;
+    --on-primary: #1a1814;
+    --wire: #f7c948;
+    --wire-text: #f7c948;
+    --line: #857f72;
+    --grid: #423d33;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1814;
+  --surface: #27241d;
+  --text: #e8e6e1;
+  --muted: #a39e93;
+  --primary: #98aeeb;
+  --on-primary: #1a1814;
+  --wire: #f7c948;
+  --wire-text: #f7c948;
+  --line: #857f72;
+  --grid: #423d33;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-/* Former inline <p1>/<p2> hero elements: keep their original spacing. */
-.hero-greeting,
-.hero-name {
+h1,
+h2,
+h3,
+p,
+ul,
+figure {
   margin: 0;
-  font: inherit;
 }
 
-/* Shared heading for every page section (About, Projects, Contact). */
-.section-title {
-  display: inline-block;
-  margin: 100px 0 0;
-  padding: 5px;
-  color: var(--color-heading);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 35px;
-  font-weight: 1000;
-  --a: -45deg;
-  --t: 8px;
-  --_s: calc(var(--t) * cos(var(--a)));
-  background: linear-gradient(var(--a), #0000 var(--_s), var(--color-underline) 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Small uppercase mono text used for designators, labels and tags. */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--gutter);
+  z-index: 100;
+  padding: 8px 14px;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: var(--on-primary);
+  font: 500 0.8125rem/1 var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--primary);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--primary);
+}
+
+.button--ghost:hover {
+  background: var(--primary);
+  color: var(--on-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto !important;
+    scroll-behavior: auto;
   }
 
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
