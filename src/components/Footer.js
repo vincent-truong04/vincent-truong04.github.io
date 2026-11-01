@@ -6,7 +6,7 @@ function Footer() {
     return (
         <footer id="contact">
             <div className="footer-header">
-                <h2>Contact Me</h2>
+                <h2 className="section-title">Contact Me</h2>
             </div>
             <ul className="link-bar">
                 <li className="icon-content">

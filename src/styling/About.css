@@ -7,20 +7,6 @@
   margin-right: 50px;
 }
 
-.about-header h2 {
-  display: inline-block;
-  color: white;
-  font-size: 35px;
-  margin-top: 100px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
-  --a: -45deg;
-  --t: 8px;
-  --_s: calc(var(--t)*cos(var(--a)));
-  background: linear-gradient(var(--a), #0000 var(--_s), lightskyblue 0 calc(100% - var(--_s)), #0000 0) bottom/var(--i, 95%) var(--t) no-repeat;
-  padding: 5px;
-}
-
 .aboutContent-container {
   display: flex;
   align-items: center;

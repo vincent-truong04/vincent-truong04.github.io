@@ -31,7 +31,7 @@ function Carousel() {
     return (
         <section className="project-section" id="projects">
             <div className="project-header">
-                <h2>Projects</h2>
+                <h2 className="section-title">Projects</h2>
             </div>
             <motion.div initial={{ y: "10%", opacity: 0 }} whileInView={{y: 0, opacity: 1 }} transition={{ duration: 1, ease: "easeOut"}} viewport={{ once: true, amount: 0.3}} className="carousel">
                 <div className="carousel__controls">
