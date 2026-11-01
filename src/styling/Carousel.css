@@ -60,24 +60,17 @@
     padding: 5px;
 }
 
-.carousel__item:nth-child(1) {
+/* Card colours repeat every three cards. */
+.carousel__item:nth-child(3n + 1) {
     background: lightseagreen;
 }
 
-.carousel__item:nth-child(2) {
+.carousel__item:nth-child(3n + 2) {
     background: lightskyblue;
 }
 
-.carousel__item:nth-child(3) {
+.carousel__item:nth-child(3n) {
     background: grey;
-}
-
-.carousel__item:nth-child(4) {
-    background: lightseagreen;
-}
-
-.carousel__item:nth-child(5) {
-    background: lightskyblue;
 }
 
 .carousel__item[data-pos="0"] {
@@ -116,7 +109,7 @@
     z-index: 3;
 }
 
-.joystickInfo {
+.project-info--joystick-insight {
     justify-content: center;
     align-items: center;
     margin: 20px;
@@ -128,7 +121,7 @@
     }
 }
 
-.portfolioInfo {
+.project-info--portfolio-website {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -141,7 +134,7 @@
     }
 }
 
-.PowerV2GInfo {
+.project-info--power-v2g-model {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -154,7 +147,7 @@
     }
 }
 
-.canvasCraftInfo {
+.project-info--canvas-craft {
     justify-content: center;
     align-items: center;
     margin: 20px;
@@ -166,7 +159,7 @@
     }
 }
 
-.moreToComeInfo {
+.project-info--more {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -217,4 +210,11 @@
 
 .carousel {
     position: relative;
+}
+
+.carousel__item[data-pos="hidden"] {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.7);
+    z-index: 1;
 }

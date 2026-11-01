@@ -64,6 +64,7 @@ figcaption {
   text-align: center;
   margin-top: 8px;
   font-family: 'Inter';
+  text-transform: uppercase;
 }
 
 .skill-icons .col1 figure,

@@ -1,0 +1,169 @@
+{
+  "profile": {
+    "name": "Vincent Truong",
+    "greeting": "Welcome!",
+    "headline": "",
+    "about": [
+      "Hello! My name is Vincent Truong, and I am a junior at Christopher Newport University pursuing a degree in Computer Engineering with a minor in Leadership. My academic journey combines technical expertise with strong leadership skills, preparing me to tackle complex challenges in engineering and technology. Outside of the classroom, I am an active member of Pi Kappa Alpha and a captain of men's varsity tennis. I am passionate about leveraging my skills to contribute to innovative projects and am eager to make an impact in the field of computer engineering, especially in the area of embedded systems."
+    ],
+    "headshot": {
+      "src": "/images/profile/headshot.png",
+      "alt": "Portrait of Vincent Truong"
+    },
+    "resumeUrl": "https://drive.google.com/file/d/1YJVYz7YWyI3NxR4hYKI01S-Bu0gT_1oU/view?usp=sharing",
+    "skills": [
+      {
+        "name": "HTML",
+        "icon": "/images/skills/html.svg"
+      },
+      {
+        "name": "Python",
+        "icon": "/images/skills/python.svg"
+      },
+      {
+        "name": "MATLAB",
+        "icon": "/images/skills/matlab.svg"
+      },
+      {
+        "name": "Java",
+        "icon": "/images/skills/java.svg"
+      },
+      {
+        "name": "React",
+        "icon": "/images/skills/react.svg"
+      },
+      {
+        "name": "CSS",
+        "icon": "/images/skills/css.svg"
+      },
+      {
+        "name": "C++",
+        "icon": "/images/skills/cplusplus.svg"
+      }
+    ]
+  },
+  "contact": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/vincent-t2468/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/vincent-truong04",
+      "icon": "github"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/vincent_truong04/",
+      "icon": "instagram"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:vincent.truong.22@cnu.edu",
+      "icon": "email"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "joystick-insight",
+      "title": "Joystick Insight",
+      "date": "",
+      "summary": "Developed a full-stack program used to quickly test joystick hardware functionality during my internship position at Trident Systems.",
+      "description": [
+        "Developed a full-stack program used to quickly test joystick hardware functionality during my internship position at Trident Systems. For each new joystick, new configurtion files were written to map each button to a program function. The program analyzed event data in real time by parsing through raw binary data and mapped it to the config files to confirm the accuracy of newly created configs. The tester utilized Java for backend and JavaFX for frontend, and also used JInput library to aid in object-oriented programming."
+      ],
+      "context": "Trident Systems internship",
+      "tags": [
+        "Java",
+        "JavaFX",
+        "JInput"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/images/projects/joystick-insight-1.png",
+          "alt": "Illustration of an arcade-style joystick"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "portfolio-website",
+      "title": "Portfolio Website",
+      "date": "",
+      "summary": "Designed and developed a personal portfolio website to showcase my skills, projects, and experiences.",
+      "description": [
+        "Designed and developed a personal portfolio website to showcase my skills, projects, and experiences. The website was created using modern web technologies, including HTML, CSS, and React, to ensure a dynamic and responsive user experience. Integrated Framer Motion to add smooth and visually appealing animations, and deployed the website on GitHub Pages for easy sharing and continuous access, utilizing version control through Git to manage updates and improvements."
+      ],
+      "context": "",
+      "tags": [
+        "HTML",
+        "CSS",
+        "React",
+        "Framer Motion",
+        "GitHub Pages",
+        "Git"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/images/projects/portfolio-website-1.png",
+          "alt": "Screenshot of this portfolio's About section with headshot and skill icons"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "power-v2g-model",
+      "title": "Power Vehicle-to-grid (V2G) Model",
+      "date": "",
+      "summary": "Modeled a vehicle-to-grid (V2G) system in Simulink during my research position at Christopher Newport University.",
+      "description": [
+        "Modeled a vehicle-to-grid (V2G) system in Simulink during my research position at Christopher Newport University. Analyzed the system by comparing outputted active power from renewable energy sources and residential loads alongside different regulations set for charging and discharging cycles."
+      ],
+      "context": "Christopher Newport University research",
+      "tags": [
+        "Simulink"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/images/projects/power-v2g-model-1.png",
+          "alt": "Simulink model of a 24-hour vehicle-to-grid simulation with PV farm, wind farm, diesel generator, V2G block and residential load"
+        }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "canvas-craft",
+      "title": "Canvas Craft",
+      "date": "",
+      "summary": "Developed a paint program using Python and Tkinter, designed to emulate the functionality of MS Paint.",
+      "description": [
+        "Developed a paint program using Python and Tkinter, designed to emulate the functionality of MS Paint. Features include adjustable brush sizes and shapes with a visual indicator, color selection and essential file operations such as New, Save As, and Exit via a file menu. Users can clear the canvas and save artwork as PNG file, utilizing the PIL library for image processing."
+      ],
+      "context": "",
+      "tags": [
+        "Python",
+        "Tkinter",
+        "PIL"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/images/projects/canvas-craft-1.png",
+          "alt": "Canvas Craft window with color, shape and brush-size controls and a yellow star drawn on the canvas"
+        }
+      ],
+      "featured": false
+    }
+  ],
+  "projectsEmptyState": {
+    "title": "More in Progress!",
+    "text": "There are many more projects to come, thank you for checking out my website!"
+  },
+  "experience": [],
+  "research": [],
+  "coursework": []
+}
