@@ -214,7 +214,60 @@
     "title": "More in Progress!",
     "text": "There are many more projects to come, thank you for checking out my website!"
   },
-  "experience": [],
+  "experience": [
+    {
+      "slug": "silicon-jackets",
+      "org": "Silicon Jackets",
+      "title": "Physical Design Engineer",
+      "location": "Atlanta, GA",
+      "start": "2026-08",
+      "end": "",
+      "summary": "RTL design, verification and physical design for RISC-V CPUs, from SystemVerilog through place-and-route and clock distribution.",
+      "bullets": [
+        "Designed the SystemVerilog RTL for an RV32I-subset RISC-V CPU with 1024×32 SRAM macros and verified it with 19 directed tests, constrained-random programs, and SystemVerilog assertions, reaching 98.4% coverage and catching all 3 injected bugs",
+        "Ran synthesis, floorplanning, power planning, placement, CTS, and routing in Design Compiler and Innovus, closing setup and hold at 200 MHz across slow, typical, and fast corners by cutting total negative slack 65% with faster cell swaps; zero DRC/LVS violations",
+        "Implementing an H-tree clock distribution network in Innovus for an 8-stage, 54K-cell RV32IMAC CPU with 12K flip-flops in Sky130, part of a four-topology study comparing skew, clock power, and timing against CCOpt, fishbone, and mesh"
+      ],
+      "tags": [
+        "SystemVerilog",
+        "Design Compiler",
+        "Innovus",
+        "Sky130"
+      ]
+    },
+    {
+      "slug": "trident-systems",
+      "org": "Trident Systems",
+      "title": "Software Engineer Intern",
+      "location": "Fairfax, VA",
+      "start": "2026-06",
+      "end": "2026-08",
+      "summary": "Built DelphiScript automation tools in Altium Designer that check board designs for teardrop compliance and floating metal.",
+      "bullets": [
+        "Cut teardrop compliance and floating metal checks from 2–3 days of manual review to under 30 minutes per design by building DelphiScript automation tools in Altium Designer that generate HTML reports",
+        "Developed a floating metal checker using depth-first search to trace net connectivity to ground across boards with up to 1,000 nets and 30 layers, flagging isolated copper not connected through any traced path",
+        "Validated each tool’s accuracy against 4–5 test boards with known violations, cross-checking a team-maintained error log"
+      ],
+      "tags": [
+        "DelphiScript",
+        "Altium Designer"
+      ]
+    },
+    {
+      "slug": "cnu-research",
+      "org": "Christopher Newport University",
+      "title": "Research Apprentice",
+      "location": "Newport News, VA",
+      "start": "2025-07",
+      "end": "2026-03",
+      "summary": "Benchmarked CNN inference across CPUs, GPUs and TPUs with Dr. Dali Wang and authored a paper for IEEE SoutheastCon 2026.",
+      "bullets": [
+        "Authored Performance Evaluation of Hardware Architectures for Convolutional Neural Networks, IEEE SoutheastCon 2026",
+        "Benchmarked CNN inference on CPUs, GPUs, and TPUs; TPUs beat A100s by 32% in throughput and 10x in performance per watt"
+      ],
+      "tags": []
+    }
+  ],
   "research": [],
   "coursework": []
 }

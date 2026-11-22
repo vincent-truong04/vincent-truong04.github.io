@@ -10,9 +10,12 @@ function Experience() {
             <ol className="entries">
                 {content.experience.map((job) => (
                     <li key={job.slug} className="entry" data-reveal>
-                        <p className="entry__meta mono">{formatRange(job.start, job.end)}{job.location && ` · ${job.location}`}</p>
+                        <p className="entry__meta mono">
+                            <span>{formatRange(job.start, job.end)}</span>
+                            {job.location && <span>{job.location}</span>}
+                        </p>
                         <div className="entry__main">
-                            <h2>{job.title}{job.org && <span> · {job.org}</span>}</h2>
+                            <h3>{job.title}{job.org && <span> · {job.org}</span>}</h3>
                             {job.summary && <p>{job.summary}</p>}
                             {job.bullets?.length > 0 && (
                                 <ul className="entry__bullets">

@@ -14,6 +14,9 @@
 }
 
 .entry__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   padding-top: 6px;
   color: var(--muted);
 }
@@ -25,13 +28,13 @@
   max-width: 68ch;
 }
 
-.entry h2 {
+.entry h3 {
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.entry h2 span,
+.entry h3 span,
 .entry__byline {
   color: var(--muted);
   font-weight: 400;

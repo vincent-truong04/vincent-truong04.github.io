@@ -137,6 +137,11 @@
   grid-column: span 2;
 }
 
+/* An even block count leaves the last one alone on its row: let it fill the row. */
+.floorplan__block:last-child:nth-child(even) {
+  grid-column: span 2;
+}
+
 .floorplan__block:hover {
   border-style: solid;
   border-color: var(--primary);

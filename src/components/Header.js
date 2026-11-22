@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
 import '../styling/Header.css';
 import { sections } from '../content';
 
@@ -23,10 +22,10 @@ function Header() {
     return (
         <header className="site-header">
             <div className="container site-header__inner">
-                <Link to="/" className="site-header__logo">V.T.</Link>
-                <nav className="site-header__nav" aria-label="Main">
+                <a href="#hero" className="site-header__logo">V.T.</a>
+                <nav className="site-header__nav" aria-label="Sections">
                     {sections.map((section) => (
-                        <NavLink key={section.id} to={section.path}>{section.label}</NavLink>
+                        <a key={section.id} href={`#${section.id}`}>{section.label}</a>
                     ))}
                 </nav>
                 <button

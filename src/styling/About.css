@@ -45,7 +45,7 @@
   border-bottom: 1px solid var(--line);
 }
 
-.pinout__head h2 {
+.pinout__head h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   line-height: 1.1;

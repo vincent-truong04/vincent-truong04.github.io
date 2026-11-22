@@ -16,13 +16,13 @@ function Skills() {
         <div className="macro pinout" data-reveal>
             <Pins />
             <header className="pinout__head">
-                <h2 id="skills-title">Skills</h2>
+                <h3 id="skills-title">Skills</h3>
                 <span className="pinout__count mono" aria-hidden="true">{total} pins</span>
             </header>
             <div className="pinout__banks">
                 {profile.skills.map((group) => (
                     <div key={group.group} className="bank">
-                        <h3 className="bank__title mono">{group.group}</h3>
+                        <h4 className="bank__title mono">{group.group}</h4>
                         <ul className="bank__pins">
                             {group.items.map((item) => {
                                 pin += 1;

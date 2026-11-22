@@ -172,14 +172,3 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
-
-/* Short pages keep the footer at the bottom of the window. */
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100svh;
-}
-
-.app > main {
-  flex: 1;
-}

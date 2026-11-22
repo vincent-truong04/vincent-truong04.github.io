@@ -1,6 +1,7 @@
 .section {
   position: relative;
-  padding-block: clamp(48px, 8vw, 96px);
+  padding-block: clamp(64px, 10vw, 128px);
+  border-top: 1px solid var(--line);
 }
 
 .section__head {
@@ -15,49 +16,11 @@
   color: var(--wire-text);
 }
 
-.section__head h1 {
+.section__head h2 {
   font-size: clamp(2rem, 4.5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
-}
-
-/* Previous / next page, like the two ends of a route. */
-.pager {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: clamp(48px, 8vw, 96px);
-  padding-top: 24px;
-  border-top: 1px dashed var(--grid);
-}
-
-.pager__link {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 16px 20px;
-  border: 1px solid var(--line);
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.2s, background-color 0.2s;
-}
-
-.pager__link .mono {
-  color: var(--muted);
-  font-weight: 400;
-}
-
-.pager__link:hover {
-  border-color: var(--primary);
-  background: var(--surface);
-}
-
-.pager__link--next {
-  grid-column: 2;
-  align-items: flex-end;
-  text-align: right;
 }
 
 /* Macro: a 1px outlined cell with a pin marker at each corner. */
