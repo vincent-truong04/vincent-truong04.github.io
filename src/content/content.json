@@ -133,14 +133,14 @@
       "date": "",
       "summary": "Designed and developed a personal portfolio website to showcase my skills, projects, and experiences.",
       "description": [
-        "Designed and developed a personal portfolio website to showcase my skills, projects, and experiences. The website was created using modern web technologies, including HTML, CSS, and React, to ensure a dynamic and responsive user experience. Integrated Framer Motion to add smooth and visually appealing animations, and deployed the website on GitHub Pages for easy sharing and continuous access, utilizing version control through Git to manage updates and improvements."
+        "Designed and developed a personal portfolio website to showcase my skills, projects, and experiences. The website was created using modern web technologies, including HTML, CSS, and React, to ensure a dynamic and responsive user experience. Integrated GSAP to add smooth and visually appealing animations, and deployed the website on GitHub Pages for easy sharing and continuous access, utilizing version control through Git to manage updates and improvements."
       ],
       "context": "",
       "tags": [
         "HTML",
         "CSS",
         "React",
-        "Framer Motion",
+        "GSAP",
         "GitHub Pages",
         "Git"
       ],
