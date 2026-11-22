@@ -17,7 +17,7 @@ npm run test:a11y      # Playwright + axe accessibility checks against build/ (r
 npm run deploy         # build and push build/ to gh-pages — publishes the live site
 ```
 
-In WSL there is no Linux Node yet; Windows Node fails on `\\wsl.localhost` paths. Either install Node in WSL (nvm) or copy the repo to a Windows folder and run npm there.
+In WSL, Node is installed with nvm and Google Chrome is installed for Playwright. Non-interactive shells (Claude Code's Bash tool, the `!` prompt) don't load `~/.bashrc`, so run `source ~/.nvm/nvm.sh` first; otherwise `npm` resolves to Windows Node, which fails on `\\wsl.localhost` paths. Commands that need sudo must be run in a real WSL terminal.
 
 ## Structure
 

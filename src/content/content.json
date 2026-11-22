@@ -66,6 +66,45 @@
   ],
   "projects": [
     {
+      "slug": "systolic-array",
+      "title": "8×8 INT8 Systolic Array: RTL to GDSII",
+      "date": "2026-11",
+      "summary": "Designed an 8×8 INT8 systolic array matrix-multiply accelerator from scratch and took it from SystemVerilog RTL to a signoff-clean GDSII layout in the open-source SkyWater 130 nm process.",
+      "description": [
+        "Designed an 8×8 INT8 systolic array, a matrix-multiply accelerator, from scratch and took it from SystemVerilog RTL to a signoff-clean GDSII layout in the open-source SkyWater 130 nm process, meeting 100 MHz at the slow, typical and fast corners with 64 multiply-accumulates per cycle (12.8 GOPS) on a 0.72 × 0.72 mm die. Verified the RTL with cocotb testbenches against a Python/NumPy golden model, then ran 30+ physical-design experiments in OpenROAD: splitting the multiply-accumulate into two pipeline stages cut area by 19%, and clock gating cut idle power by 87% (40.3 → 5.4 mW). Signoff covered multi-corner timing, DRC and LVS in both Magic/Netgen and KLayout, antenna and IR drop. Block-level design, not taped out."
+      ],
+      "context": "",
+      "tags": [
+        "SystemVerilog",
+        "Verilator",
+        "cocotb",
+        "Python",
+        "Yosys",
+        "OpenROAD",
+        "Magic",
+        "Netgen",
+        "KLayout",
+        "Tcl"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/vincent-truong04/systolic-array"
+        }
+      ],
+      "images": [
+        {
+          "src": "/images/projects/systolic-array-1.webp",
+          "alt": "Final GDSII layout of the 8×8 systolic array: a square die filled with rows of standard cells and routing, with input pins along the left and top edges and output pins along the bottom"
+        },
+        {
+          "src": "/images/projects/systolic-array-2.webp",
+          "alt": "Placement plot of the 0.72 mm square die with each processing element's flip-flops colored, showing the 8×8 logical array laid out as an 8×8 physical grid from PE(0,0) at top left to PE(7,7) at bottom right"
+        }
+      ],
+      "featured": false
+    },
+    {
       "slug": "joystick-insight",
       "title": "Joystick Insight",
       "date": "",

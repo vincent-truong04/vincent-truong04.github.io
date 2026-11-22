@@ -74,6 +74,21 @@
   padding: 12px;
 }
 
+/* Several images sit side by side as square tiles, first image leftmost. */
+.project__image--multi {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+}
+
+.project__image--multi img {
+  aspect-ratio: 1 / 1;
+}
+
+.project__image--multi img + img {
+  border-left: 1px solid var(--grid);
+}
+
 .project__body {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,7 @@ const { projects, projectsEmptyState } = content;
 const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function ProjectCard({ project, designator, onRoute, onUnroute }) {
-    const cover = project.images[0];
+    const { images } = project;
     return (
         <article
             className="macro project"
@@ -27,9 +27,11 @@ function ProjectCard({ project, designator, onRoute, onUnroute }) {
                 <h3>{project.title}</h3>
                 {project.context && <p className="project__context mono">{project.context}</p>}
             </header>
-            {cover && (
-                <div className="project__image">
-                    <img src={asset(cover.src)} alt={cover.alt} loading="lazy" />
+            {images.length > 0 && (
+                <div className={`project__image${images.length > 1 ? ' project__image--multi' : ''}`}>
+                    {images.map((image) => (
+                        <img key={image.src} src={asset(image.src)} alt={image.alt} loading="lazy" />
+                    ))}
                 </div>
             )}
             <div className="project__body">
