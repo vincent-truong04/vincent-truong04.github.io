@@ -147,8 +147,8 @@
       "links": [],
       "images": [
         {
-          "src": "/images/projects/portfolio-website-1.png",
-          "alt": "Screenshot of this portfolio's About section with headshot and skill icons"
+          "src": "/images/projects/portfolio-website-1.webp",
+          "alt": "Screenshot of this portfolio's hero section in dark mode: \"My name is Vincent Truong\" with Resume and Learn More buttons, beside chip-style blocks labeled U1 About, U2 Projects and U3 Contact"
         }
       ],
       "featured": false
