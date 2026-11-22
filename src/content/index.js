@@ -3,6 +3,11 @@ import content from './content.json';
 // Image paths in content.json are relative to public/.
 export const asset = (src) => `${process.env.PUBLIC_URL}${src}`;
 
+// The resume is either a file in public/ ("/...") or an external URL.
+export const resumeHref = content.profile.resumeUrl.startsWith('/')
+    ? asset(content.profile.resumeUrl)
+    : content.profile.resumeUrl;
+
 // Page sections in order. Sections whose entries are empty are left out,
 // along with their nav link. Each gets a floorplan designator (U1, U2...).
 const SECTIONS = [

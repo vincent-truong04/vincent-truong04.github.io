@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import '../styling/Hero.css';
-import content, { sections } from '../content';
+import content, { resumeHref, sections } from '../content';
 import Pins from './Pins';
 
 const { profile } = content;
@@ -44,7 +44,7 @@ function Hero() {
                         </h1>
                         {profile.headline && <p className="hero__headline" data-hero>{profile.headline}</p>}
                         <div className="hero__actions" data-hero>
-                            <a className="button" href={profile.resumeUrl} target="_blank" rel="noreferrer">Resume</a>
+                            <a className="button" href={resumeHref} target="_blank" rel="noreferrer">Resume</a>
                             <a className="button button--ghost" href="#about">Learn More</a>
                         </div>
                     </div>

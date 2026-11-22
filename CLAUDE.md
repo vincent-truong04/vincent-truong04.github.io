@@ -25,7 +25,7 @@ In WSL, Node is installed with nvm and Google Chrome is installed for Playwright
 - `src/content/index.js` — `asset()` for image paths and the `sections` list (order, nav labels, U-designators; empty sections are hidden).
 - `src/components/` — one component per section (`Hero`, `About`, `Experience`, `Projects`, `Research`, `Coursework`, `Footer` = Contact + site footer), plus `Section` (shared heading), `Pins`, `contactIcons`, `dates`.
 - `src/styling/` — `index.css` holds the design tokens (light/dark on `:root`), base styles and `.button`/`.mono`; one CSS file per component.
-- `public/images/` — all images (see below).
+- `public/images/` — all images (see below). `public/Vincent_Truong_Resume.pdf` — the resume.
 - `tests/a11y.spec.js` — accessibility suite.
 
 ## Design ("Tapeout")
@@ -49,8 +49,8 @@ Arrays are rendered **in array order**; there is no sorting. Keep new entries **
 | `headline` | no | One line under the hero name; hidden if empty |
 | `about` | yes | Array of paragraphs |
 | `headshot` | yes | `{ "src", "alt" }` |
-| `resumeUrl` | yes | Used by both Resume buttons |
-| `skills` | yes | Array of `{ "name", "icon" }`; icon is an SVG in `public/images/skills/` |
+| `resumeUrl` | yes | Used by both Resume buttons. Either a file in `public/` (`"/Vincent_Truong_Resume.pdf"`, wrapped in `asset()`) or an external URL. To update the resume, replace `public/Vincent_Truong_Resume.pdf` |
+| `skills` | yes | Array of groups `{ "group", "items": [] }` matching the resume's Skills section (Languages, EDA Tools, Tools & Hardware); items are plain strings shown as text pins, no icons |
 
 ### `contact` (array)
 
@@ -89,10 +89,10 @@ Arrays are rendered **in array order**; there is no sorting. Keep new entries **
 
 ### Images
 
-- Location: `public/images/<section>/` — `projects/`, `research/`, `experience/`, `profile/`, `skills/`.
+- Location: `public/images/<section>/` — `projects/`, `research/`, `experience/`, `profile/`.
 - Naming: `<slug>-<n>.<ext>` starting at 1 (`joystick-insight-1.png`). Referenced in JSON as `/images/projects/<slug>-<n>.<ext>` (paths are relative to `public/`; components wrap them in `asset()`).
 - Format: WebP, long edge ≤ 1600px, original aspect ratio, for new images. The existing images are still PNG because no converter was installed; convert them when `cwebp`/`sharp` is available and update the paths.
-- Alt text describes what the image shows (e.g. "Simulink model of a 24-hour vehicle-to-grid simulation…"), never the file name. Skill icons use `alt=""` because their name is printed beside them.
+- Alt text describes what the image shows (e.g. "Simulink model of a 24-hour vehicle-to-grid simulation…"), never the file name.
 - Never reference images outside the repo.
 
 ### Accuracy

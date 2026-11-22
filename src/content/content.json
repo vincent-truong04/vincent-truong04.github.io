@@ -10,35 +10,47 @@
       "src": "/images/profile/headshot.png",
       "alt": "Portrait of Vincent Truong"
     },
-    "resumeUrl": "https://drive.google.com/file/d/1YJVYz7YWyI3NxR4hYKI01S-Bu0gT_1oU/view?usp=sharing",
+    "resumeUrl": "/Vincent_Truong_Resume.pdf",
     "skills": [
       {
-        "name": "HTML",
-        "icon": "/images/skills/html.svg"
+        "group": "Languages",
+        "items": [
+          "TCL",
+          "Python",
+          "SystemVerilog",
+          "Verilog",
+          "VHDL",
+          "C",
+          "C++",
+          "Assembly",
+          "HIP"
+        ]
       },
       {
-        "name": "Python",
-        "icon": "/images/skills/python.svg"
+        "group": "EDA Tools",
+        "items": [
+          "Cadence Innovus",
+          "Pegasus",
+          "Virtuoso",
+          "ADE Maestro",
+          "Xcelium",
+          "Design Compiler",
+          "OpenROAD",
+          "Vivado",
+          "Altium Designer"
+        ]
       },
       {
-        "name": "MATLAB",
-        "icon": "/images/skills/matlab.svg"
-      },
-      {
-        "name": "Java",
-        "icon": "/images/skills/java.svg"
-      },
-      {
-        "name": "React",
-        "icon": "/images/skills/react.svg"
-      },
-      {
-        "name": "CSS",
-        "icon": "/images/skills/css.svg"
-      },
-      {
-        "name": "C++",
-        "icon": "/images/skills/cplusplus.svg"
+        "group": "Tools & Hardware",
+        "items": [
+          "Linux",
+          "Git",
+          "Xilinx FPGAs",
+          "Oscilloscope",
+          "Logic Analyzer",
+          "Raspberry Pi",
+          "ESP32"
+        ]
       }
     ]
   },
