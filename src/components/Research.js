@@ -12,7 +12,7 @@ function Research() {
                     <li key={item.slug} className="entry" data-reveal>
                         <p className="entry__meta mono">{formatDate(item.date)}{item.kind && ` · ${item.kind}`}</p>
                         <div className="entry__main">
-                            <h3>{item.title}</h3>
+                            <h2>{item.title}</h2>
                             {(item.authors?.length > 0 || item.venue) && (
                                 <p className="entry__byline">
                                     {item.authors?.join(', ')}{item.authors?.length > 0 && item.venue && '. '}

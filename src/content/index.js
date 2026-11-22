@@ -8,8 +8,9 @@ export const resumeHref = content.profile.resumeUrl.startsWith('/')
     ? asset(content.profile.resumeUrl)
     : content.profile.resumeUrl;
 
-// Page sections in order. Sections whose entries are empty are left out,
-// along with their nav link. Each gets a floorplan designator (U1, U2...).
+// Pages after Home, in nav order. Each lives at /<id>. Pages whose entries are
+// empty are left out, along with their nav link and route. Each gets a
+// floorplan designator (U1, U2...).
 const SECTIONS = [
     { id: 'about', label: 'About', title: 'About Me', show: true },
     { id: 'experience', label: 'Experience', title: 'Experience', show: content.experience.length > 0 },
@@ -21,7 +22,9 @@ const SECTIONS = [
 
 export const sections = SECTIONS
     .filter((section) => section.show)
-    .map((section, i) => ({ ...section, designator: `U${i + 1}` }));
+    .map((section, i) => ({ ...section, path: `/${section.id}`, designator: `U${i + 1}` }));
+
+export const HOME = { id: 'home', label: 'Home', path: '/' };
 
 export const sectionById = (id) => sections.find((section) => section.id === id);
 

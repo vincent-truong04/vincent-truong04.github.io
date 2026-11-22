@@ -29,42 +29,94 @@
   line-height: 1.55;
 }
 
-.about__skills-title {
-  margin-top: 16px;
+/* Skills: a full-width macro laid out like a datasheet pin list. */
+.pinout {
+  margin-top: clamp(48px, 8vw, 96px);
+  padding: clamp(20px, 3vw, 36px);
+}
+
+.pinout__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pinout__head h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.pinout__count {
+  color: var(--muted);
+}
+
+.pinout__banks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 48px);
+}
+
+.bank__title {
+  margin: 0 0 8px;
+  color: var(--wire-text);
+  font-weight: 400;
+}
+
+/* Each skill is a pin: number, a short stub of wire, then the name. */
+.bank__pin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 9px;
+  border-bottom: 1px dashed var(--grid);
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.bank__num {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
   color: var(--muted);
   font-weight: 400;
 }
 
-/* Skills sit on a shared rail like pins along a cell edge. */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding-bottom: 8px;
+.bank__num::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--line);
+  transition: background-color 0.2s, width 0.2s;
 }
 
-.skills__pin {
-  padding: 6px 12px;
-  border: 1px solid var(--line);
-  background: var(--surface);
+.bank__pin:hover .bank__num::after {
+  width: 24px;
+  background: var(--wire);
 }
 
-.skill-groups {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: -8px;
+@media (max-width: 960px) {
+  .pinout__banks {
+    grid-template-columns: 1fr;
+  }
+
+  .bank__pins {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
 }
 
-.skill-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.skill-group__title {
-  color: var(--muted);
-  font-weight: 400;
+@media (max-width: 480px) {
+  .bank__pins {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {

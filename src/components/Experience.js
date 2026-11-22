@@ -12,7 +12,7 @@ function Experience() {
                     <li key={job.slug} className="entry" data-reveal>
                         <p className="entry__meta mono">{formatRange(job.start, job.end)}{job.location && ` · ${job.location}`}</p>
                         <div className="entry__main">
-                            <h3>{job.title}{job.org && <span> · {job.org}</span>}</h3>
+                            <h2>{job.title}{job.org && <span> · {job.org}</span>}</h2>
                             {job.summary && <p>{job.summary}</p>}
                             {job.bullets?.length > 0 && (
                                 <ul className="entry__bullets">

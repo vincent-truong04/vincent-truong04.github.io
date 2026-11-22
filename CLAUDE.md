@@ -1,6 +1,6 @@
 # Vincent Truong — portfolio site
 
-Personal portfolio for hardware recruiters and engineers (MS ECE at Georgia Tech, VLSI; RTL design and ASIC physical design). Single-page React app built with Create React App, deployed to GitHub Pages.
+Personal portfolio for hardware recruiters and engineers (MS ECE at Georgia Tech, VLSI; RTL design and ASIC physical design). Multi-page React app (React Router, one page per section) built with Create React App, deployed to GitHub Pages.
 
 ## Branches
 
@@ -22,11 +22,12 @@ In WSL, Node is installed with nvm and Google Chrome is installed for Playwright
 ## Structure
 
 - `src/content/content.json` — **all site content** (see Content model).
-- `src/content/index.js` — `asset()` for image paths and the `sections` list (order, nav labels, U-designators; empty sections are hidden).
-- `src/components/` — one component per section (`Hero`, `About`, `Experience`, `Projects`, `Research`, `Coursework`, `Footer` = Contact + site footer), plus `Section` (shared heading), `Pins`, `contactIcons`, `dates`.
+- `src/content/index.js` — `asset()` for image paths, `resumeHref`, and the `sections` list (order, nav labels, paths `/<id>`, U-designators; empty sections get no page, route or nav link).
+- `src/App.js` — routes: `/` is Home (`Hero`), each section is its own page, anything else is `NotFound`. On a page change it sets the tab title, scrolls to the top and focuses the page's `h1`. `npm run build` copies `index.html` to `404.html` so deep links work on GitHub Pages.
+- `src/components/` — one component per section (`Hero`, `About`, `Experience`, `Projects`, `Research`, `Coursework`, `Footer` = Contact + site footer), plus `Section` (page wrapper: designator, the page's `h1`, and previous/next page links), `NotFound`, `Pins`, `contactIcons`, `dates`. Headings: each page has one `h1` (Section title, or the hero name on Home); items inside a page are `h2`.
 - `src/styling/` — `index.css` holds the design tokens (light/dark on `:root`), base styles and `.button`/`.mono`; one CSS file per component.
 - `public/images/` — all images (see below). `public/Vincent_Truong_Resume.pdf` — the resume.
-- `tests/a11y.spec.js` — accessibility suite.
+- `tests/a11y.spec.js` — accessibility suite; runs on every page, plus navigation, pager and deep-link tests.
 
 ## Design ("Tapeout")
 

@@ -36,7 +36,7 @@ function Footer() {
         <footer className="site-footer">
             <div className="container site-footer__inner">
                 <p className="mono">{content.profile.name} ©{currentYear}</p>
-                <a className="mono" href="#hero">Back to top ↑</a>
+                <a className="mono" href="#main">Back to top ↑</a>
             </div>
         </footer>
     );

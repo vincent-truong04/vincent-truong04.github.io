@@ -8,6 +8,11 @@ const VIEWPORTS = [
 ];
 const SCHEMES = ['light', 'dark'];
 
+// Every page: Home plus one per section that has content (same rule as src/content/index.js).
+const content = require('../src/content/content.json');
+const PAGES = ['/', '/about', ...['experience'].filter((k) => content[k].length).map((k) => `/${k}`), '/projects',
+  ...['research', 'coursework'].filter((k) => content[k].length).map((k) => `/${k}`), '/contact'];
+
 const summarize = (violations) => violations.map((v) => ({
   id: v.id,
   impact: v.impact,
@@ -15,37 +20,43 @@ const summarize = (violations) => violations.map((v) => ({
   targets: v.nodes.slice(0, 5).map((n) => n.target.join(' ')),
 }));
 
-// Reduced motion keeps every section visible, so axe can check all of it.
-for (const vp of VIEWPORTS) {
-  for (const scheme of SCHEMES) {
-    test(`axe: ${vp.name} ${scheme}`, async ({ page }) => {
-      await page.setViewportSize({ width: vp.width, height: vp.height });
-      await page.emulateMedia({ colorScheme: scheme, reducedMotion: 'reduce' });
-      await page.goto('/', { waitUntil: 'networkidle' });
-      await page.screenshot({ path: `test-results/a11y/${vp.name}-${scheme}.png`, fullPage: true });
+const slug = (path) => (path === '/' ? 'home' : path.slice(1));
 
-      const results = await new AxeBuilder({ page })
-        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
-        .analyze();
-      expect(summarize(results.violations)).toEqual([]);
-    });
+// Reduced motion keeps everything visible, so axe can check all of each page.
+for (const path of PAGES) {
+  for (const vp of VIEWPORTS) {
+    for (const scheme of SCHEMES) {
+      test(`axe: ${path} ${vp.name} ${scheme}`, async ({ page }) => {
+        await page.setViewportSize({ width: vp.width, height: vp.height });
+        await page.emulateMedia({ colorScheme: scheme, reducedMotion: 'reduce' });
+        await page.goto(path, { waitUntil: 'networkidle' });
+        await page.screenshot({ path: `test-results/a11y/${slug(path)}-${vp.name}-${scheme}.png`, fullPage: true });
+
+        const results = await new AxeBuilder({ page })
+          .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+          .analyze();
+        expect(summarize(results.violations)).toEqual([]);
+      });
+    }
   }
 }
 
-test('axe after scrolling with motion on', async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: 'no-preference' });
-  await page.goto('/', { waitUntil: 'networkidle' });
-  for (let y = 0; y < 8000; y += 600) {
-    await page.mouse.wheel(0, 600);
-    await page.waitForTimeout(150);
-  }
-  await page.waitForTimeout(1000);
-  const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
-  expect(summarize(results.violations)).toEqual([]);
-});
+for (const path of PAGES) {
+  test(`axe after scrolling with motion on: ${path}`, async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    await page.goto(path, { waitUntil: 'networkidle' });
+    for (let y = 0; y < 5000; y += 600) {
+      await page.mouse.wheel(0, 600);
+      await page.waitForTimeout(150);
+    }
+    await page.waitForTimeout(1000);
+    const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    expect(summarize(results.violations)).toEqual([]);
+  });
+}
 
-test('keyboard: every stop is reachable, visible and outlined; no trap', async ({ page }) => {
-  await page.goto('/', { waitUntil: 'networkidle' });
+for (const path of PAGES) test(`keyboard: every stop is reachable, visible and outlined; no trap: ${path}`, async ({ page }) => {
+  await page.goto(path, { waitUntil: 'networkidle' });
   const total = await page.evaluate(() => document.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])').length);
   const stops = [];
   for (let i = 0; i < total + 5; i++) {
@@ -75,7 +86,7 @@ test('keyboard: every stop is reachable, visible and outlined; no trap', async (
 });
 
 test('skip link moves focus to main content', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/', { waitUntil: 'networkidle' });
   await page.keyboard.press('Tab');
   await expect(page.locator('.skip-link')).toBeFocused();
   await expect(page.locator('.skip-link')).toBeInViewport();
@@ -84,12 +95,12 @@ test('skip link moves focus to main content', async ({ page }) => {
 });
 
 // 320 CSS px is what a 1280px window shows at 400% zoom (WCAG 1.4.10 Reflow).
-for (const width of [320, 640]) {
-  test(`reflow at ${width}px: no horizontal scrolling`, async ({ page }) => {
+for (const path of PAGES) for (const width of [320, 640]) {
+  test(`reflow at ${width}px: no horizontal scrolling: ${path}`, async ({ page }) => {
     await page.setViewportSize({ width, height: 800 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.goto('/', { waitUntil: 'networkidle' });
-    await page.screenshot({ path: `test-results/a11y/reflow-${width}.png`, fullPage: true });
+    await page.goto(path, { waitUntil: 'networkidle' });
+    await page.screenshot({ path: `test-results/a11y/reflow-${slug(path)}-${width}.png`, fullPage: true });
     const overflow = await page.evaluate(() => {
       const docWidth = document.documentElement.clientWidth;
       return [...document.querySelectorAll('body *')]
@@ -102,9 +113,9 @@ for (const width of [320, 640]) {
   });
 }
 
-test('reduced motion: all content is visible without scrolling or waiting', async ({ page }) => {
+for (const path of PAGES) test(`reduced motion: all content is visible without scrolling or waiting: ${path}`, async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/', { waitUntil: 'domcontentloaded' });
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(100);
   const hidden = await page.evaluate(() => [...document.querySelectorAll('[data-reveal], [data-hero], .floorplan__block')]
     .filter((el) => { const s = getComputedStyle(el); return s.visibility === 'hidden' || Number(s.opacity) < 1; })
@@ -123,4 +134,36 @@ test('theme toggle switches and remembers the theme', async ({ page }) => {
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('nav switches pages, sets the title, marks the current link and focuses the heading', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await page.locator('.site-header__nav').getByRole('link', { name: 'Projects' }).click();
+  await expect(page).toHaveURL(/\/projects$/);
+  await expect(page).toHaveTitle(/^Projects · /);
+  await expect(page.locator('main h1')).toHaveText('Projects');
+  await expect(page.locator('main h1')).toBeFocused();
+  await expect(page.locator('.site-header__nav [aria-current="page"]')).toHaveText('Projects');
+  expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  await page.goBack();
+  await expect(page.locator('.hero')).toBeVisible();
+});
+
+test('pager clicks through every page in order', async ({ page }) => {
+  await page.goto(PAGES[1], { waitUntil: 'networkidle' });
+  for (const path of PAGES.slice(2)) {
+    await page.locator('.pager__link--next').click();
+    await expect(page).toHaveURL(new RegExp(`${path}$`));
+  }
+  await expect(page.locator('.pager__link--next')).toHaveCount(0);
+  await page.goto(PAGES[1]);
+  await page.locator('.pager__link--prev').click();
+  await expect(page.locator('.hero')).toBeVisible();
+});
+
+test('deep links load directly and unknown paths show a not-found page', async ({ page }) => {
+  await page.goto('/contact', { waitUntil: 'networkidle' });
+  await expect(page.locator('main h1')).toHaveText('Contact Me');
+  await page.goto('/no-such-page', { waitUntil: 'networkidle' });
+  await expect(page.locator('main h1')).toHaveText('Page not found');
 });

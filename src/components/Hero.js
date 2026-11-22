@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import '../styling/Hero.css';
@@ -20,7 +21,7 @@ function Hero() {
     }, { scope: root });
 
     return (
-        <section className="hero" id="hero" ref={root}>
+        <section className="hero" ref={root}>
             <svg className="hero__grid" aria-hidden="true">
                 <defs>
                     <pattern id="placement-rows" width="24" height="24" patternUnits="userSpaceOnUse">
@@ -45,16 +46,16 @@ function Hero() {
                         {profile.headline && <p className="hero__headline" data-hero>{profile.headline}</p>}
                         <div className="hero__actions" data-hero>
                             <a className="button" href={resumeHref} target="_blank" rel="noreferrer">Resume</a>
-                            <a className="button button--ghost" href="#about">Learn More</a>
+                            <Link className="button button--ghost" to="/about">Learn More</Link>
                         </div>
                     </div>
 
                     <nav className="floorplan" aria-label="Floorplan">
                         {sections.map((section) => (
-                            <a key={section.id} className="floorplan__block" href={`#${section.id}`}>
+                            <Link key={section.id} className="floorplan__block" to={section.path}>
                                 <span className="mono">{section.designator}</span>
                                 {section.label}
-                            </a>
+                            </Link>
                         ))}
                     </nav>
                 </div>

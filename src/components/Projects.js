@@ -24,7 +24,7 @@ function ProjectCard({ project, designator, onRoute, onUnroute }) {
             <Pins />
             <header className="project__head">
                 <span className="project__designator mono">{designator}</span>
-                <h3>{project.title}</h3>
+                <h2>{project.title}</h2>
                 {project.context && <p className="project__context mono">{project.context}</p>}
             </header>
             {images.length > 0 && (
@@ -108,7 +108,7 @@ function Projects() {
                         />
                     ))}
                     <article className="macro project project--empty" data-reveal>
-                        <h3>{projectsEmptyState.title}</h3>
+                        <h2>{projectsEmptyState.title}</h2>
                         <p>{projectsEmptyState.text}</p>
                     </article>
                 </div>
