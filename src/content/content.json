@@ -78,9 +78,35 @@
   ],
   "projects": [
     {
+      "slug": "uart-i2c-usb-spi-macro",
+      "title": "UART/I2C/USB/SPI Peripheral Macro",
+      "date": "2026-11",
+      "summary": "UART, I2C, USB 1.1, and SPI peripheral hard macro for the Riscduino quad-core RISC-V SoC, built for hierarchical full-chip integration.",
+      "description": [
+        "UART, I2C, USB 1.1, and SPI peripheral hard macro for the Riscduino quad-core RISC-V SoC, built for hierarchical full-chip integration. Owned the block from RTL to signoff in Design Compiler and Innovus at 100 MHz: wrote the SDC for four asynchronous clocks, I/O budgets, and multicycle paths, built MMMC views with OCV and CPPR, and closed setup and hold at the slow, typical, and fast corners with post-route ECOs. Shrank the die to 459.5 × 699.2 µm (70% target utilization, 73.8% final density) and delivered three handoff versions with LEF, DEF, per-corner timing libraries, SPEF, and SDF, keeping routing below the top metal layer reserved for chip power. Signed off LVS-clean in Pegasus, with only block-level density DRCs left for chip-level fill."
+      ],
+      "context": "",
+      "tags": [
+        "Innovus",
+        "Design Compiler",
+        "Quantus",
+        "Pegasus",
+        "Tcl",
+        "Sky130"
+      ],
+      "links": [],
+      "images": [
+        {
+          "src": "/images/projects/uart-i2c-usb-spi-macro-1.webp",
+          "alt": "Final routed layout of the UART/I2C/USB/SPI macro: a tall rectangular block of standard cells covered in metal routing, with evenly spaced vertical metal-4 power stripes"
+        }
+      ],
+      "featured": false
+    },
+    {
       "slug": "systolic-array",
       "title": "8×8 INT8 Systolic Array: RTL to GDSII",
-      "date": "2026-11",
+      "date": "2026-09",
       "summary": "Designed an 8×8 INT8 systolic array matrix-multiply accelerator from scratch and took it from SystemVerilog RTL to a signoff-clean GDSII layout in the open-source SkyWater 130 nm process.",
       "description": [
         "Designed an 8×8 INT8 systolic array, a matrix-multiply accelerator, from scratch and took it from SystemVerilog RTL to a signoff-clean GDSII layout in the open-source SkyWater 130 nm process, meeting 100 MHz at the slow, typical and fast corners with 64 multiply-accumulates per cycle (12.8 GOPS) on a 0.72 × 0.72 mm die. Verified the RTL with cocotb testbenches against a Python/NumPy golden model, then ran 30+ physical-design experiments in OpenROAD: splitting the multiply-accumulate into two pipeline stages cut area by 19%, and clock gating cut idle power by 87% (40.3 → 5.4 mW). Signoff covered multi-corner timing, DRC and LVS in both Magic/Netgen and KLayout, antenna and IR drop. Block-level design, not taped out."
@@ -114,6 +140,25 @@
           "alt": "Placement plot of the 0.72 mm square die with each processing element's flip-flops colored, showing the 8×8 logical array laid out as an 8×8 physical grid from PE(0,0) at top left to PE(7,7) at bottom right"
         }
       ],
+      "featured": false
+    },
+    {
+      "slug": "custom-sram",
+      "title": "Custom SRAM Design",
+      "date": "2026-08",
+      "summary": "Full-custom 64×8 SRAM with a 16×32 6T array, 4:1 column multiplexing, and complete read/write periphery, targeting 1 GHz at 0.8 V.",
+      "description": [
+        "Full-custom 64×8 SRAM with a 16×32 6T array, 4:1 column multiplexing, and complete read/write periphery, targeting 1 GHz at 0.8 V, designed by a five-person team. Designed the precharge, write driver, and column decoder circuits, then integrated them with the array and control block into the full SRAM, and drew DRC/LVS-clean layouts for the precharge and column transmission-gate cells. Closed write timing by doubling multiplexer and write-driver transistor widths, growing write margin from 20 to 111 ps at 1 GHz. Cut decoder depth from 6 to 4 stages and retimed precharge to remove a wordline–precharge overlap, lifting sense margin to +32 ps. Fixed write failures seen only at the full-system level by upsizing the control block’s output drivers to sharpen slow signal edges."
+      ],
+      "context": "ECE 6130 team project, Georgia Tech",
+      "tags": [
+        "Cadence Virtuoso",
+        "ADE Maestro",
+        "Calibre",
+        "FreePDK 45 nm"
+      ],
+      "links": [],
+      "images": [],
       "featured": false
     },
     {
